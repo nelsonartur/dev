@@ -8,7 +8,6 @@ var counter=0;
 var r=0;
 var g=0;
 var b=0;
-
 var rest=false;
 
 
