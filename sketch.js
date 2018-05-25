@@ -19,8 +19,6 @@ function draw() {
     a=0;
   }
 
-  console.log(a)
-
 rotateY(a+90)
   if(a<180){
     texture(pic)
