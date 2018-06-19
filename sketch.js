@@ -4,7 +4,7 @@ var a = 0;
 
 function setup() {
   img = loadImage("healthyego.png");
-  pic = loadImage("TV.jpg");
+  pic = loadImage("healthyego_w.png");
   createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
 }
@@ -18,6 +18,8 @@ function draw() {
   }else if (a>360) {
     a=0;
   }
+
+  console.log(a)
 
 rotateY(a+90)
   if(a<180){
