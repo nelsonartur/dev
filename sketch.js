@@ -1,5 +1,8 @@
 function setup(){
   createCanvas(50,50);
+}
+
+function mousePressed(){
   createP("is nice");
 }
 
