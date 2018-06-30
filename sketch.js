@@ -16,7 +16,7 @@ function preload(){
   HE = loadImage('HE.jpg');
 
   for (var i = 0; i< 10; i++){
-    pic1= loadImage("Lisa/"+i+".JPG");
+    pic1= loadImage("Lisa/"+i+".jpg");
     pictures1.push(pic1);
   }
 }
