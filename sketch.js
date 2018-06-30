@@ -15,7 +15,7 @@ function preload(){
   song = loadSound('sosi.mp3');
   HE = loadImage('HE.jpg');
 
-  for (var i = 1; i< 10; i++){
+  for (var i = 0; i< 10; i++){
     pic1= loadImage("pics/"+i+".jpg");
     pictures1.push(pic1);
   }
