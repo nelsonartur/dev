@@ -1,5 +1,5 @@
 var Value  =130;
-var Length =39;
+var Length =20;
 var song;
 var playing = false;
 var show = true;
