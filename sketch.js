@@ -1,5 +1,5 @@
-var Value  =120;
-var Length =5;
+var Value  =130;
+var Length =39;
 var song;
 var playing = false;
 var show = true;
@@ -57,14 +57,14 @@ function Pictures1(){
   push();
   imageMode(CENTER);
 
-  image(pictures1[round(random(0,pictures1.length-1))],windowWidth/2,windowHeight/2,(windowWidth-1500),3456*((windowWidth-1500)/5184));
+  image(pictures1[round(random(0,pictures1.length-1))],windowWidth/2,windowHeight/2,(windowWidth-500),3456*((windowWidth-500)/5184));
   pop();
 }
 
 function HealthyEgo(){
   push();
   imageMode(CENTER);
-  image(HE,windowWidth/2,windowHeight/2,(windowWidth-1500),1748*((windowWidth-1500)/2480));
+  image(HE,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
   pop();
 }
 
