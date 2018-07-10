@@ -16,7 +16,7 @@ function preload(){
   HE = loadImage('HE.jpg');
 
   for (var i = 0; i< 10; i++){
-    pic1= loadImage("pics/"+i+".jpg");
+   /*pic1= loadImage("pics/"+i+".jpg");*/         loadImage("Lisa/IMG_918"+i+".jpg");
     pictures1.push(pic1);
   }
 }
