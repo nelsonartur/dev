@@ -12,6 +12,8 @@ var HE;
 var spectrum;
 
 function preload(){
+  img= createImg('instagram.png','clickable');
+  
   song = loadSound('sosi.mp3');
   HE = loadImage('HE.jpg');
 
@@ -26,12 +28,23 @@ function preload(){
 function setup(){
   cnv = createCanvas(windowWidth,windowHeight);
   fft = new p5.FFT(0.8,64);
+  
+  cnv.mousePressed(togglePlay)
+  
+  img.position(windowWidth/2,3*(windowHeight/4));
+  img.size(160,120);
+  img.mousePressed(link)
 }
 
+function link(){
+     window.open("https://instagram.com/haelthyego");
+ }
 
-function mousePressed(){
+
+/*function mousePressed(){
   togglePlay();
 }
+*//
 
 function draw(){
    background(0);
