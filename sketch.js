@@ -31,6 +31,9 @@ function setup(){
   
   cnv.mousePressed(togglePlay)
   
+  img.position((windowWidth/2)-30,3*(windowHeight/4));
+    img.size(80,60);
+    img.mousePressed(link);
   
 }
 
@@ -46,11 +49,8 @@ function draw(){
 
   if(show){
     HealthyEgo();
-    
-    img.position((windowWidth/2)-30,3*(windowHeight/4));
-    img.size(80,60);
-    img.mousePressed(link);
-  }
+  }else{
+  img.hide()};
 
 
 
