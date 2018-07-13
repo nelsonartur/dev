@@ -12,7 +12,7 @@ var HE;
 var spectrum;
 
 function preload(){
-  img= createImg('instagram.png','clickable');
+ 
   
   song = loadSound('sosi.mp3');
   HE = loadImage('HE.jpg');
@@ -28,6 +28,8 @@ function preload(){
 function setup(){
   cnv = createCanvas(windowWidth,windowHeight);
   fft = new p5.FFT(0.8,64);
+  
+   img= createImg('instagram.png','clickable');
   
   cnv.mousePressed(togglePlay)
   
