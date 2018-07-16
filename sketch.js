@@ -99,7 +99,7 @@ function Pictures2(){
   push();
   imageMode(CENTER);
  
- space=random(0,1000);
+ space=500//random(0,1000);
 
   image(HE1,windowWidth/2,windowHeight/2,(windowWidth-space),3456*((windowWidth-space)/5184));
   pop();
