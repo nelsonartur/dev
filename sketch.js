@@ -41,7 +41,7 @@ function setup(){
   
   cnv.mousePressed(togglePlay)
   
-  img.position((windowWidth/2)-60,3*(windowHeight/4));
+  img.position((windowWidth/2)-40,3*(windowHeight/4));
     img.size(80,60);
     img.mousePressed(link);
   
