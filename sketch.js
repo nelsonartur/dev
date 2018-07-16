@@ -64,6 +64,8 @@ function draw(){
   img.hide()};
 
  
+ 
+ 
 
 
 
@@ -75,7 +77,8 @@ function draw(){
   }
  
   if(spectrum[Length2]>Value2){
-    Pictures2();
+    setInterval(Pictures2,2000);
+    //Pictures2();
   }
 
 }
