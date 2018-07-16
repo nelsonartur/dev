@@ -59,7 +59,7 @@ function draw(){
 
   if(show){
     HealthyEgo();
-    setTimeout(showInstagram(),2000);
+    setTimeout(showInstagram,2000);
   }else{
   img.hide()};
 
