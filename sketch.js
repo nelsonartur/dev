@@ -59,7 +59,7 @@ function draw(){
 
   if(show){
     HealthyEgo();
-    img.show();
+    setTimeout(img.show(),500);
   }else{
   img.hide()};
 
@@ -72,13 +72,13 @@ function draw(){
   spectrum = fft.analyze();
 
   //pictures
-  if(spectrum[Length2]>Value2){
-   Pictures2();
-   Value2+=1;
-  }
- 
   if(spectrum[Length]>Value){
     Pictures1();
+  }
+ 
+ if(spectrum[Length2]>Value2){
+   Pictures2();
+   Value2+=1;
   }
  
  
