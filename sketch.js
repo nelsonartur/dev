@@ -72,14 +72,16 @@ function draw(){
   spectrum = fft.analyze();
 
   //pictures
+  if(spectrum[Length2]>Value2){
+   Pictures2();
+   Value2+=1;
+  }
+ 
   if(spectrum[Length]>Value){
     Pictures1();
   }
  
-  if(spectrum[Length2]>Value2){
-    setInterval(Pictures2,2000);
-    //Pictures2();
-  }
+ 
 
 }
 
