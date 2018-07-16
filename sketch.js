@@ -1,7 +1,7 @@
 var Value  =130;
 var Length =20;
 
-var Value2  =190;
+var Value2  =170;
 var Length2 =5;
 
 var space;
@@ -23,6 +23,7 @@ function preload(){
   
   song = loadSound('sosi.mp3');
   HE = loadImage('HE.jpg');
+ HE1 = loadImage('HE.png');
 
   for (var i = 1; i< 10; i++){
     pic1=loadImage("Lisa/IMG_918"+i+".jpg");
@@ -95,7 +96,7 @@ function Pictures2(){
  
  space=random(0,1000);
 
-  image(HE,windowWidth/2,windowHeight/2,(windowWidth-space),3456*((windowWidth-space)/5184));
+  image(HE1,windowWidth/2,windowHeight/2,(windowWidth-space),3456*((windowWidth-space)/5184));
   pop();
 }
 
