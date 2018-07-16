@@ -1,5 +1,12 @@
 var Value  =130;
 var Length =20;
+
+var Value2  =190;
+var Length2 =5;
+
+var space;
+
+
 var song;
 var playing = false;
 var show = true;
@@ -55,6 +62,7 @@ function draw(){
   }else{
   img.hide()};
 
+ 
 
 
 
@@ -63,6 +71,10 @@ function draw(){
   //pictures
   if(spectrum[Length]>Value){
     Pictures1();
+  }
+ 
+  if(spectrum[Length2]>Value2){
+    Pictures2();
   }
 
 }
@@ -74,6 +86,16 @@ function Pictures1(){
   imageMode(CENTER);
 
   image(pictures1[round(random(0,pictures1.length-1))],windowWidth/2,windowHeight/2,(windowWidth-500),3456*((windowWidth-500)/5184));
+  pop();
+}
+
+function Pictures2(){
+  push();
+  imageMode(CENTER);
+ 
+ space=random(0,1000);
+
+  image(HE,windowWidth/2,windowHeight/2,(windowWidth-space),3456*((windowWidth-space)/5184));
   pop();
 }
 
