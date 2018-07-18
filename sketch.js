@@ -46,7 +46,7 @@ function setup(){
     img.mousePressed(instagramLink);
  
  fb.position((windowWidth/2)+40,3*(windowHeight/4));
-    fb.size(80,60);
+    fb.size(40,40);
     fb.mousePressed(facebookLink);
   
 }
