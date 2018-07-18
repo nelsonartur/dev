@@ -64,7 +64,7 @@ function draw(){
 
   if(show){
    HealthyEgo();
-     img.show(),
+     img.show();
   }else{
   img.hide()};
 
