@@ -51,8 +51,8 @@ function setup(){
 }
 
 function link(){
- window.open("https://instagram.com/haelthyego");
- window.open("https://m.facebook.com/Healthy-Ego-993923804114169/");
+ window.open("https://healthyego.github.io/info/");
+ 
  }
 
 
