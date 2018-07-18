@@ -34,6 +34,7 @@ function preload(){
 
 
 function setup(){
+ imageMode(CENTER);
  cnv = createCanvas(windowWidth,windowHeight);
  fft = new p5.FFT(0.8,64);
  img= createImg('HEGarten.png','clickable');
