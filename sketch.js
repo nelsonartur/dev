@@ -36,28 +36,24 @@ function preload(){
 function setup(){
  cnv = createCanvas(windowWidth,windowHeight);
  fft = new p5.FFT(0.8,64);
- img= createImg('instagram.png','clickable');
- fb=createImg('facebook.png','clickable');  
+ img= createImg('HEGarten.png','clickable');
+ 
   
   cnv.mousePressed(togglePlay)
   
-  img.position((windowWidth/2)-40,3*(windowHeight/4));
-    img.size(50,50);
-    img.mousePressed(instagramLink);
+  img.position((windowWidth/2),3*(windowHeight/4));
+    img.size(400,225);
+    img.mousePressed(link);
  
- fb.position((windowWidth/2)+40,3*(windowHeight/4));
-    fb.size(50,50);
-    fb.mousePressed(facebookLink);
+ 
   
 }
 
-function instagramLink(){
-     window.open("https://instagram.com/haelthyego");
+function link(){
+ window.open("https://instagram.com/haelthyego");
+ window.open("https://m.facebook.com/Healthy-Ego-993923804114169/");
  }
 
-function facebookLink(){
-     window.open("https://m.facebook.com/Healthy-Ego-993923804114169/");
- }
 
 
 
