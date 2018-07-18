@@ -42,11 +42,11 @@ function setup(){
   cnv.mousePressed(togglePlay)
   
   img.position((windowWidth/2)-40,3*(windowHeight/4));
-    img.size(80,60);
+    img.size(50,50);
     img.mousePressed(instagramLink);
  
  fb.position((windowWidth/2)+40,3*(windowHeight/4));
-    fb.size(40,40);
+    fb.size(50,50);
     fb.mousePressed(facebookLink);
   
 }
