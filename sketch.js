@@ -34,21 +34,29 @@ function preload(){
 
 
 function setup(){
-  cnv = createCanvas(windowWidth,windowHeight);
-  fft = new p5.FFT(0.8,64);
-  
-   img= createImg('instagram.png','clickable');
+ cnv = createCanvas(windowWidth,windowHeight);
+ fft = new p5.FFT(0.8,64);
+ img= createImg('instagram.png','clickable');
+ fb=createImg('facebook.png','clickable');  
   
   cnv.mousePressed(togglePlay)
   
   img.position((windowWidth/2)-40,3*(windowHeight/4));
     img.size(80,60);
-    img.mousePressed(link);
+    img.mousePressed(instagramLink);
+ 
+ fb.position((windowWidth/2)+40,3*(windowHeight/4));
+    fb.size(80,60);
+    fb.mousePressed(facebookLink);
   
 }
 
-function link(){
+function instagramLink(){
      window.open("https://instagram.com/haelthyego");
+ }
+
+function facebookLink(){
+     window.open("https://m.facebook.com/Healthy-Ego-993923804114169/");
  }
 
 
@@ -58,8 +66,9 @@ function draw(){
    background(0);
 
   if(show){
-    HealthyEgo();
-    setTimeout(showInstagram,300);
+   HealthyEgo();
+   img.show();
+    //setTimeout(showInstagram,300);
   }else{
   img.hide()};
 
@@ -82,9 +91,10 @@ function draw(){
   }
 }
 
-function showInstagram(){
+/*function showInstagram(){
  img.show()
 }
+*/
 
 
 function Pictures1(){
