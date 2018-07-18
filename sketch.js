@@ -64,7 +64,7 @@ function draw(){
 
   if(show){
    HealthyEgo();
-     setTimeout(img.show(),150)
+     img.show(),
   }else{
   img.hide()};
 
