@@ -60,7 +60,7 @@ function link(){
 
 
 function draw(){
-   background(0);
+   background(255);
 
   if(show){
    HealthyEgo();
