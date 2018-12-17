@@ -12,7 +12,7 @@ function mousePressed(){
 
 function draw(){
  background(0);
- HealthEgo();
+// HealthEgo();
 }
 
 function HealthyEgo(){
