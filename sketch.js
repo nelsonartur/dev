@@ -2,7 +2,7 @@ function setup(){
  imageMode(CENTER);
   
  var cnv = createCanvas(windowWidth,windowHeight);
- var img= createImg('HE.png','clickable');  
+ var img= createImg('HE.w.png','clickable');  
 }
 
 
@@ -12,7 +12,7 @@ function mousePressed(){
 
 function draw(){
  background(0);
-// HealthEgo();
+ HealthEgo();
 }
 
 function HealthyEgo(){
