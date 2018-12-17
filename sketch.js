@@ -7,7 +7,7 @@ function setup(){
 
 
 function mousePressed(){
- window.open("https://healthyego.github.io/info/");
+ //window.open("https://healthyego.github.io/info/");
 }
 
 function draw(){
