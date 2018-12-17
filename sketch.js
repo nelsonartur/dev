@@ -1,8 +1,9 @@
+ var img
 function setup(){
  imageMode(CENTER);
   
  var cnv = createCanvas(windowWidth,windowHeight);
-// var img= createImg('HE.w.png','clickable');  
+  img= createImg('HE.w.png','clickable');  
 }
 
 
@@ -15,7 +16,7 @@ function draw(){
  
   push();
   imageMode(CENTER);
-  image('HE.w.png',windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
+  image(img,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
   pop();
 }
 
