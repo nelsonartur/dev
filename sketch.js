@@ -2,7 +2,7 @@
 function setup(){
  imageMode(CENTER);
   
- var cnv = createCanvas(windowWidth,windowHeight);
+ var cnv = createCanvas(windowWidth,2*windowHeight);
   img= createImg('HE.w.png','clickable');  
 }
 
