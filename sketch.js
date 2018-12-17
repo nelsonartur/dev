@@ -12,10 +12,7 @@ function mousePressed(){
 
 function draw(){
  background(0);
- HealthEgo();
-}
-
-function HealthyEgo(){
+ 
   push();
   imageMode(CENTER);
   image(img,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
