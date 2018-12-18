@@ -1,11 +1,9 @@
-var img;
-
-function preload() {
-  img = loadImage('healthyegobw.png');
-}
+//function mousePressed(){
+//window.open("")}
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
+  img = loadImage('healthyegobw.png');
 	
 }
 
