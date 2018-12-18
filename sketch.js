@@ -12,7 +12,7 @@ function setup() {
 function draw() {
 	imageMode(CENTER);
   background(0);
-	image(img,0,0)
+	image(img,windowWidth/2,windowHeight/2)
 }
 
 
