@@ -1,9 +1,7 @@
  var img
-function setup(){
- imageMode(CENTER);
-  
+function setup(){ 
  var cnv = createCanvas(windowWidth,windowHeight);
-  img= createImg('HE.w.png','clickable');  
+  img= createImg('HE.w.png');  
 }
 
 
