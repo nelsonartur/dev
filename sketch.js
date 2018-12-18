@@ -1,7 +1,7 @@
 var img;
 
 function preload() {
-  img = loadImage('HE.w.jpg');
+  img = loadImage('HE.w.png');
 }
 
 function setup() {
