@@ -1,4 +1,4 @@
-unction mousePressed(){
+function mousePressed(){
 window.open("https://healthyego.github.io/info/");
 }
 
