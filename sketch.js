@@ -1,22 +1,18 @@
- var img
-function setup(){ 
- var cnv = createCanvas(windowWidth,windowHeight);
-  img= createImg('HE.w.png');  
+var img;
+
+function preload() {
+  img = loadImage('HE.w.jpg');
 }
 
-
-function mousePressed(){
- window.open("https://healthyego.github.io/info/");
+function setup() {
+  createCanvas(windowWidth,windowHeight);
+	
 }
 
-function draw(){
- background(0);
- 
-  push();
- image(img, windowWidth/2, windowHeight/2)
-  //imageMode(CENTER);
-  //image(img,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
-  pop();
+function draw() {
+	imageMode(CENTER);
+  background(0);
+	image(img,0,0)
 }
 
 
