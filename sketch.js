@@ -1,4 +1,4 @@
-function mousePressed(){
+unction mousePressed(){
 window.open("https://healthyego.github.io/info/");
 }
 
@@ -11,7 +11,7 @@ function setup() {
 function draw() {
 	imageMode(CENTER);
   background(0);
-	image(img,windowWidth/2,windowHeight/2,width,width/1.8);
+	image(img,windowWidth/2,windowHeight/2,width,width/1.42);
 }
 
 
