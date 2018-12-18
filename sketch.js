@@ -1,7 +1,6 @@
 function setup() {
  cnv= createCanvas(windowWidth,windowHeight);
-  img = loadImage('healthyegobw.png');
-	
+  img = loadImage('HE.w.png');
 }
 
 function draw() {
