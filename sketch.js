@@ -15,8 +15,9 @@ function draw(){
  background(0);
  
   push();
-  imageMode(CENTER);
-  image(img,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
+ image(img, windowWidth/2, windowHeight/2)
+  //imageMode(CENTER);
+  //image(img,windowWidth/2,windowHeight/2,(windowWidth-500),1748*((windowWidth-500)/2480));
   pop();
 }
 
