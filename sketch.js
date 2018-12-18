@@ -9,7 +9,7 @@ b=random(100,180);
 
 function draw() {
 imageMode(CENTER);
-background(rgb);
+background(r,g,b);
 image(img,windowWidth/2,windowHeight/2,width,width/1.42);
 
 	
