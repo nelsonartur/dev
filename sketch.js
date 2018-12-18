@@ -1,5 +1,6 @@
-//function mousePressed(){
-//window.open("")}
+function mousePressed(){
+window.open("https://healthyego.github.io/info/");
+}
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
@@ -10,7 +11,7 @@ function setup() {
 function draw() {
 	imageMode(CENTER);
   background(0);
-	image(img,windowWidth/2,windowHeight/2,width,width/1.78);
+	image(img,windowWidth/2,windowHeight/2,width,width/1.8);
 }
 
 
