@@ -1,7 +1,7 @@
 var img;
 
 function preload() {
-  img = loadImage('HE.w.png');
+  img = loadImage('healthyegobw.png');
 }
 
 function setup() {
@@ -12,7 +12,7 @@ function setup() {
 function draw() {
 	imageMode(CENTER);
   background(0);
-	image(img,windowWidth/2,windowHeight/2,width/2,height/2)
+	image(img,windowWidth/2,windowHeight/2,width,width/1.78);
 }
 
 
