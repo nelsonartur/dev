@@ -1,3 +1,20 @@
+function setuo (){
+cnv=createCanavs(windowWidth, windowHeight);
+img=loadImage('HE.png');
+}
+
+function draw(){
+ r;g;b =random(100,180);
+ 
+ background(r,g,b);
+}
+
+
+
+/*function LINK(){
+ window.open("http://www.healthyego.studio/info");
+}
+
 
 function setup() {
  cnv= createCanvas(windowWidth,windowHeight);
@@ -17,14 +34,3 @@ function draw() {
 
  cnv.mousePressed(LINK());
 }
-
-
-
-
-
-function LINK(){
- window.open("http://www.healthyego.studio/info");
-}
-
-
-
