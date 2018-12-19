@@ -4,7 +4,7 @@ var b;
 var c;
 
 function setup (){
-cnv=createCanavs(windowWidth, windowHeight);
+createCanavs(windowWidth, windowHeight);
 img=loadImage('HE.png');
 }
 
