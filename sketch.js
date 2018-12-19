@@ -1,3 +1,7 @@
+var = cnv; img; r; g; b; 
+
+
+
 function setuo (){
 cnv=createCanavs(windowWidth, windowHeight);
 img=loadImage('HE.png');
