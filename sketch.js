@@ -16,13 +16,10 @@ background(r,g,b);
 image(img,windowWidth/2,windowHeight/2,width,width/1.42);
 
 	
-cnv.mousePressed(LINK);
+cnv.mousePressed(window.open("https://healthyego.github.io/info/"));
 }
 
 
 
 
 
-function LINK(){
-window.open("https://healthyego.github.io/info/");
-}
