@@ -10,18 +10,21 @@ b=random(100,180);
 }
 
 function draw() {
+ 
+ imageMode(CENTER);
+ background(r,g,b);
+ image(img,windowWidth/2,windowHeight/2,width,width/1.42);
 
-
-	
-imageMode(CENTER);
-background(r,g,b);
-image(img,windowWidth/2,windowHeight/2,width,width/1.42);
-
-	
-cnv.mousePressed(window.open("https://healthyego.github.io/info/"));
+ cnv.mousePressed(LINK());
 }
 
 
+
+
+
+function LINK(){
+ window.open("https://healthyego.github.io/info/");
+}
 
 
 
