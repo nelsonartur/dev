@@ -1,7 +1,7 @@
 
 function setup() {
  cnv= createCanvas(windowWidth,windowHeight);
- img = loadImage('HE.w.png');
+ img = loadImage('HE.png');
 
 r=random(100,180);
 g=random(100,180);
