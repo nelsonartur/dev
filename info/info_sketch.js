@@ -3,7 +3,7 @@ function mousePressed(){
 }
 
 function setup(){
- img = loadImage('info.png');
+ img = loadImage('info/info.png');
  createCanvas(windowWidth, windowHeight);
  background(80);
 }
