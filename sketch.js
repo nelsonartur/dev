@@ -19,6 +19,9 @@ function draw(){
  
  background(c);
  
+ image(img,windowWidth/2,windowHeight/2,width,width/1.42);
+
+ 
  
  //cnv.mousePressed(window.open('http://www.healthyego.studio/konkret'));
 }
