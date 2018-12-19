@@ -1,11 +1,11 @@
-
+var cnv;
 var img; 
 var b;
 var c;
 
-function setuo (){
-createCanavs(windowWidth, windowHeight);
-//img=loadImage('HE.png');
+function setup (){
+cnv=createCanavs(windowWidth, windowHeight);
+img=loadImage('HE.png');
 }
 
 function draw(){
@@ -20,7 +20,7 @@ function draw(){
  background(c);
  
  
- //cnv.mousePressed(LINK());
+ cnv.mousePressed(LINK());
 }
 
 
