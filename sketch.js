@@ -23,7 +23,7 @@ function draw() {
 
 
 function LINK(){
- window.open("https://healthyego.github.io/info/");
+ window.open("http://www.healthyego.studio/info");
 }
 
 
