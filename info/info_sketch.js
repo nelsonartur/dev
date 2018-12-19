@@ -1,4 +1,4 @@
-
+var img;
 
 function setup(){
  img = loadImage('info/info.png');
