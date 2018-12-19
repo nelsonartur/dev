@@ -1,4 +1,4 @@
-var cnv; 
+
 var img; 
 var b;
 var c;
@@ -20,7 +20,7 @@ function draw(){
  background(c);
  
  
- cnv.mousePressed(LINK);
+ cnv.mousePressed(LINK());
 }
 
 
