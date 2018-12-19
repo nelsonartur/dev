@@ -9,5 +9,9 @@ function setup(){
 function draw(){ 
  imageMode(CENTER);
  image(img,windowWidth/2,windowHeight/2,height/1.7777,height); 
- img.mousePressed(window.open("https://instagram.com/haelthyego/"));
+ img.mousePressed(LINK());
+}
+
+function LINK(){
+window.open("https://instagram.com/haelthyego/")
 }
