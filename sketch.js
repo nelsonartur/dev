@@ -18,7 +18,13 @@ function draw(){
  }
  
  background(c);
+ 
+ 
+ cnv.mousePressed(LINK());
 }
 
 
 
+function LINK(){
+window.open('http://www.healthyego.studio/konkret');
+}
