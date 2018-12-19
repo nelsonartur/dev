@@ -1,6 +1,4 @@
-function Link(){
- window.open("https://instagram.com/haelthyego/")
-}
+
 
 function setup(){
  img = loadImage('info/info.png');
@@ -11,5 +9,5 @@ function setup(){
 function draw(){ 
  imageMode(CENTER);
  image(img,windowWidth/2,windowHeight/2,height/1.7777,height); 
- img.mousePressed(Link());
+ img.mousePressed(window.open("https://instagram.com/haelthyego/"));
 }
