@@ -1,6 +1,8 @@
-var = cnv; img; r; g; b; 
-
-
+var cnv; 
+var img; 
+var r;
+var g;
+var b; 
 
 function setuo (){
 cnv=createCanavs(windowWidth, windowHeight);
