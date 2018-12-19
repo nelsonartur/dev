@@ -20,7 +20,7 @@ function draw(){
  background(c);
  
  
- cnv.mousePressed(LINK());
+ //cnv.mousePressed(LINK());
 }
 
 
