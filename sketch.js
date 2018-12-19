@@ -20,11 +20,9 @@ function draw(){
  background(c);
  
  
- cnv.mousePressed(LINK());
+ //cnv.mousePressed(window.open('http://www.healthyego.studio/konkret'));
 }
 
 
 
-function LINK(){
-window.open('http://www.healthyego.studio/konkret');
-}
+
