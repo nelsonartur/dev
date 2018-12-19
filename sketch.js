@@ -4,7 +4,7 @@ var b;
 var c;
 
 function setup (){
-createCanavs(windowWidth, windowHeight);
+cnv= createCanvas(windowWidth, windowHeight);
 img=loadImage('HE.png');
 }
 
