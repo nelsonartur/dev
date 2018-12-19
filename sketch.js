@@ -5,7 +5,7 @@ var c;
 
 function setup (){
 cnv= createCanvas(windowWidth, windowHeight);
-img=loadImage('HE.png');
+//img=loadImage('HE.png');
 }
 
 function draw(){
@@ -17,9 +17,9 @@ function draw(){
  c=255
  }
  
- background(100);
+ background(c);
  
- image(img,windowWidth/2,windowHeight/2,width,width/1.42);
+ //image(img,windowWidth/2,windowHeight/2,width,width/1.42);
 
  
  
