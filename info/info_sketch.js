@@ -19,7 +19,7 @@ w=height/1.77
 image(konkret,0,0,w,height);
 
  
- imageMode(Center);
+ imageMode(CENTER);
  push();
  image(info,windowWidth/2-w/4,windowHeight/2,w,height)
  pop();
