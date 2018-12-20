@@ -23,7 +23,7 @@ function draw(){
 
  
  
- //cnv.mousePressed(window.open('http://www.healthyego.studio/konkret'));
+ cnv.mousePressed(window.open('http://www.healthyego.studio/konkret'));
 }
 
 
