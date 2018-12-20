@@ -16,7 +16,7 @@ info= loadImage('info/info.png');
  
 w=height/1.77
  
-image(konret,0,0,w,height);
+image(konkret,0,0,w,height);
 
  
  imageMode(Center);
