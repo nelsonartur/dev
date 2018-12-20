@@ -21,9 +21,11 @@ function draw(){
  }
  
  background(100);
+ push()
  imageMode(CENTER);
  image(img1,windowWidth/2,windowHeight/2,width,width/1.42);
- image(img2,windowWidth/2,windowHeight/4)
+ pop()
+ image(img2,0,0,height*1.42,height)
 }
 
 
