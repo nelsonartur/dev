@@ -20,7 +20,7 @@ function draw(){
  c=255
  }
  
- background(c);
+ background(0);
  push()
  imageMode(CENTER);
  image(img1,windowWidth/2,windowHeight/2,width,width/1.42);
