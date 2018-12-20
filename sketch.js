@@ -7,7 +7,7 @@ var c;
 function setup (){
 cnv= createCanvas(windowWidth, windowHeight);
 img1=loadImage('frontpage/HE.png');
- img2=loadImage('frontpage/Logo_konkret.png');
+ img2=loadImage('frontpage/konkret.png');
  cnv.mousePressed(LINK);
 }
 
