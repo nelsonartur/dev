@@ -2,20 +2,33 @@ var konkret;
 var info;
 var cnv;
 var w;
+var b1;
+var b2;
+
 
 function LINK(){
 window.open("https://www.instagram.com/haelthyego/");
 }
 
 function setup(){
-cnv=createCanvas(windowWidth,windowHeight),
-cnv.mousePressed(LINK);
-background(0);
-konkret= loadImage('info/konkret.png');
-info= loadImage('info/info.png');
+ 
+ b1=loadImage('info/b1.png');
+ b2=loadImage('info/b2.png');
+ konkret= loadImage('info/konkret.png');
+ info= loadImage('info/info.png');
+ 
+ cnv=createCanvas(windowWidth,windowHeight),
+ cnv.mousePressed(LINK);
+ 
+ if(windowWidth>1080){
+ background(b1);
+ }else{
+ background(b2);
+ }
 }
 
 function draw(){
+ 
  w=height/1.77
  image(konkret,0,0,w,height);
 
