@@ -13,16 +13,15 @@ cnv.mousePressed(LINK);
 background(0);
 konkret= loadImage('info/konkret.png');
 info= loadImage('info/info.png');
- 
-w=height/1.77
- 
-image(konkret,0,0,w,height);
+}
+
+function draw(){
+ w=height/1.77
+ image(konkret,0,0,w,height);
 
  
  imageMode(CENTER);
  push();
  image(info,windowWidth/2-w/4,windowHeight/2,w,height)
  pop();
-
 }
-
