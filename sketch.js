@@ -23,6 +23,7 @@ function draw(){
  background(100);
  imageMode(CENTER);
  image(img1,windowWidth/2,windowHeight/2,width,width/1.42);
+ image(img2,windowWidth/2,windowHeight/4)
 }
 
 
