@@ -23,7 +23,7 @@ function setup(){
 }
 
 function draw(){
- if(windowWidth>1080){
+ if(windowWidth<=1080){
  background(b1);
  }else{
  background(b2);
