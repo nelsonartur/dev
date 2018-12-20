@@ -1,11 +1,13 @@
 var cnv;
-var img; 
+var img1; 
+var img2;
 var b;
 var c;
 
 function setup (){
 cnv= createCanvas(windowWidth, windowHeight);
-img=loadImage('HE.png');
+img1=loadImage('frontpage/HE.png');
+ img2=loadImage('frontpage/Logo_konkret.png')
 }
 
 function draw(){
@@ -19,7 +21,7 @@ function draw(){
  
  background(100);
  imageMode(CENTER);
- image(img,windowWidth/2,windowHeight/2,width,width/1.42);
+ image(img1,windowWidth/2,windowHeight/2,width,width/1.42);
 
  
  
