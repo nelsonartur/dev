@@ -1,20 +1,28 @@
-var img;
-
-function preload(){
-img = loadImage('info/info.png');
-}
-
-function setup(){ 
- createCanvas(windowWidth, windowHeight);
- background(80);
- img.mousePressed(LINK);
-}
-
-function draw(){ 
- imageMode(CENTER);
- image(img,windowWidth/2,windowHeight/2,height/1.7777,height); 
-}
+var konkret;
+var info;
+var cnv;
+var w;
 
 function LINK(){
-window.open("https://instagram.com/haelthyego/")
+window.open("https://www.instagram.com/haelthyego/");
 }
+
+function setup(){
+cnv=createCanvas(windowWidth,windowHeight),
+cnv.mousePressed(LINK);
+background(0);
+konkret= loadImage('info/konkret.png');
+info= loadImage('info/info.png');
+ 
+w=height/1.77
+ 
+image(konret,0,0,w,height);
+
+ 
+ imageMode(Center);
+ push();
+ image(info,windowWidth/2-w/4,windowHeight/2,w,height)
+ pop();
+
+}
+
