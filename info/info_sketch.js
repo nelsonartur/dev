@@ -7,7 +7,7 @@ img = loadImage('info/info.png');
 function setup(){ 
  createCanvas(windowWidth, windowHeight);
  background(80);
- img.mousePressed(LINK());
+ img.mousePressed(LINK);
 }
 
 function draw(){ 
