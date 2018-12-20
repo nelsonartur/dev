@@ -9,6 +9,7 @@ cnv= createCanvas(windowWidth, windowHeight);
 img1=loadImage('frontpage/HE.png');
  img2=loadImage('frontpage/konkret.png');
  cnv.mousePressed(LINK);
+ img2.mousePressed(LINK);
 }
 
 function draw(){
@@ -20,7 +21,7 @@ function draw(){
  c=255
  }
  
- background(100);
+ background(c);
  push()
  imageMode(CENTER);
  image(img1,windowWidth/2,windowHeight/2,width,width/1.42);
