@@ -22,7 +22,7 @@ function draw(){
  background(c);
  push()
  imageMode(CENTER);
- image(img1,windowWidth/2,windowHeight/2,height,height/1.77);
+ image(img1,windowWidth/2,windowHeight/2,height/1.77,height);
  pop()
 }
 
