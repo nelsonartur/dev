@@ -15,7 +15,7 @@ function setup(){
  b1=loadImage('info/b1.png');
  b2=loadImage('info/b2.png');
  konkret= loadImage('info/konkret.png');
- info= loadImage('info/info.png');
+ info= loadImage('info/Info.png');
  
  cnv=createCanvas(windowWidth,windowHeight),
  cnv.mousePressed(LINK);
