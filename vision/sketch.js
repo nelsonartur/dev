@@ -5,7 +5,7 @@ var c;
 
 function setup (){
 cnv= createCanvas(windowWidth, windowHeight);
-img1=loadImage('frontpage/front.png');
+img1=loadImage('IMG_5864.jpg');
 
  cnv.mousePressed(LINK);
 }
