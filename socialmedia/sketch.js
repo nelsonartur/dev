@@ -5,7 +5,7 @@ var c;
 
 function setup (){
 cnv= createCanvas(windowWidth, windowHeight);
-img1=loadImage('vision/IMG_5864.jpg');
+img1=loadImage('socialmedia/IMG_5864.jpg');
 
  cnv.mousePressed(LINK);
 }
