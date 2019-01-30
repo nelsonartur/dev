@@ -12,10 +12,10 @@ window.open("https://www.instagram.com/haelthyego/");
 
 function setup(){
  
- b1=loadImage('info/b1.png');
- b2=loadImage('info/b2.png');
- konkret= loadImage('info/konkret.png');
- info= loadImage('info/Info.png');
+ b1=loadImage('http://www.healthyego.studio/info/b1.png');
+ b2=loadImage('http://www.healthyego.studio/info/b2.png');
+ konkret= loadImage('http://www.healthyego.studio/info/konkret.png');
+ info= loadImage('http://www.healthyego.studio/info/Info.png');
  
  cnv=createCanvas(windowWidth,windowHeight),
  cnv.mousePressed(LINK);
