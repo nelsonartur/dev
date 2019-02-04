@@ -25,7 +25,7 @@ HE_Height= 0.07*windowHeight;
 Höhe= windowHeight - HE_Height;
 Breite= windowWidth;
 
-HE_Logo=loadImage('HE.png');
+HE_Logo=loadImage('events/HE.png');
 
 anzahllinks=folder.length;
 
