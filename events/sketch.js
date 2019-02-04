@@ -5,10 +5,10 @@ var HE_Height; // Höhe "HE-HEAD"
 var HE_Logo;
 var font;
 
-var folder=['association','events','issue','blog','socialmedia']; //Namen der Unterpunkte
-var Schrift=['A S S O C I A T I O N','E V E N T S','I S S U E','B L O G','S O C I A L'];
-var Schriftextra=['ASS OC IAT ION','EV EN TS','ISS UE','B L O G','SOC IAL MED IA'];
-var Schrift_Protrait=['ASSOCIATION','EVENTS','ISSUE','BLOG','SOCIALMEDIA'];
+var folder=['abiball','31.12','garten','konkret]; //Namen der Unterpunkte
+var Schrift=['A B I B A L L','3 1 | 1 2','G A R T E N','K O N K R E T'];
+var Schriftextra=['ABI BA LL','31 | 1 2','GA RT EN','KO NK RET'];
+var Schrift_Protrait=['ABIBALL','31|12','GARTEN','KONKRET'];
 
 
 
@@ -81,11 +81,6 @@ if(width/height<1.5){
   div3.class('div_style_portrait');
   div3.position(0,(3*Höhe/anzahllinks)+HE_Height);
   div3.mousePressed(Link3);
-
-  var div4=createDiv();
-  div4.class('div_style_portrait');
-  div4.position(0,(4*Höhe/anzahllinks)+HE_Height);
-  div4.mousePressed(Link4);
 }
 
 
@@ -164,19 +159,19 @@ function draw(){
 
 //Hilfsfunktionen----------------------------------------------------------------------------------------------------------
 function Link0(){
-  window.open('https://www.healthyego.studio/'+folder[0],'_self');
+  window.open('https://www.healthyego.studio/events'+folder[0],'_self');
 }
 function Link1(){
-  window.open('https://www.healthyego.studio/'+folder[1],'_self');
+  window.open('https://www.healthyego.studio/events'+folder[1],'_self');
 }
 function Link2(){
-  window.open('https://www.healthyego.studio/'+folder[2],'_self');
+  window.open('https://www.healthyego.studio/events'+folder[2],'_self');
 }
 function Link3(){
-  window.open('https://www.healthyego.studio/'+folder[3],'_self');
+  window.open('https://www.healthyego.studio/events'+folder[3],'_self');
 }
 function Link4(){
-  window.open('https://www.healthyego.studio/'+folder[4],'_self');
+  window.open('https://www.healthyego.studio/events'+folder[4],'_self');
 }
 function Link5(){
   window.open('https://www.healthyego.studio/'+folder[5],'_self');
