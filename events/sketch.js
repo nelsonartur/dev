@@ -16,7 +16,7 @@ var Schrift_Protrait=['ASSOCIATION','EVENTS','ISSUE','BLOG','SOCIALMEDIA'];
 
 
 function preload(){
-  font = loadFont('HelveticaNeue-Light.otf');} 
+  font = loadFont('events/HelveticaNeue-Light.otf');} 
 
 function setup (){
 var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
