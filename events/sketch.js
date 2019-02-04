@@ -88,7 +88,7 @@ if(width/height<1.5){
 //Links mit A ----------------------------------------------------------------------------------------------------------------
 for (var n=0;n<anzahllinks;n++){
   if(width/height>=1.5){  //Landscape
-    var a1 = createA('https://www.healthyego.studio/'+folder[n],Schriftextra[n]);
+    var a1 = createA('https://www.healthyego.studio/events/'+folder[n],Schriftextra[n]);
     a1.class('icon_landscape');
     a1.center();
 
