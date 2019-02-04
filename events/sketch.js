@@ -7,7 +7,7 @@ var font;
 
 var folder=['abiball','31.12','garten','konkret']; //Namen der Unterpunkte
 var Schrift=['A B I B A L L','3 1 | 1 2','G A R T E N','K O N K R E T'];
-var Schriftextra=['A BI BA LL','31 12','GA RT EN','KON KR ET'];
+var Schriftextra=['ABI BALL','31 12','GA RT EN','KO NK RE T'];
 var Schrift_Protrait=['ABIBALL','31|12','GARTEN','KONKRET'];
 
 
