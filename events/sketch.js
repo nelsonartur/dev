@@ -7,7 +7,7 @@ var font;
 
 var folder=['abiball','31.12','garten','konkret']; //Namen der Unterpunkte
 var Schrift=['A B I B A L L','3 1 | 1 2','G A R T E N','K O N K R E T'];
-var Schriftextra=['ABI BA LL','31 | 1 2','GA RT EN','KO NK RET'];
+var Schriftextra=['A B I B A L L','3 1 1 2','G A R T E N','K O N K R E T'];
 var Schrift_Protrait=['ABIBALL','31|12','GARTEN','KONKRET'];
 
 
@@ -97,7 +97,7 @@ for (var n=0;n<anzahllinks;n++){
     a1.position((n*Breite/anzahllinks), HE_Height);
   }
   if(width/height<1.5){  //Portrait
-    var a1 = createA('https://www.healthyego.studio/'+folder[n],Schrift_Protrait[n]);
+    var a1 = createA('https://www.healthyego.studio/events/'+folder[n],Schrift_Protrait[n]);
      a1.class('icon_portrait');
      a1.position(0, ((n*Höhe/anzahllinks)+HE_Height));
   }
@@ -159,19 +159,19 @@ function draw(){
 
 //Hilfsfunktionen----------------------------------------------------------------------------------------------------------
 function Link0(){
-  window.open('https://www.healthyego.studio/events'+folder[0],'_self');
+  window.open('https://www.healthyego.studio/events/'+folder[0],'_self');
 }
 function Link1(){
-  window.open('https://www.healthyego.studio/events'+folder[1],'_self');
+  window.open('https://www.healthyego.studio/events/'+folder[1],'_self');
 }
 function Link2(){
-  window.open('https://www.healthyego.studio/events'+folder[2],'_self');
+  window.open('https://www.healthyego.studio/events/'+folder[2],'_self');
 }
 function Link3(){
-  window.open('https://www.healthyego.studio/events'+folder[3],'_self');
+  window.open('https://www.healthyego.studio/events/'+folder[3],'_self');
 }
 function Link4(){
-  window.open('https://www.healthyego.studio/events'+folder[4],'_self');
+  window.open('https://www.healthyego.studio/events/'+folder[4],'_self');
 }
 function Link5(){
   window.open('https://www.healthyego.studio/'+folder[5],'_self');
