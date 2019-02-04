@@ -137,7 +137,7 @@ function draw(){
 
  //text------------------------------------------------------------------------------------------------------------------
 
- textSize(12);
+ textSize(15);
  textFont(font);
  textAlign(CENTER, CENTER);
  for (var n=0;n<=anzahllinks;n++){
