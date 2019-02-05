@@ -17,7 +17,7 @@ var links=['https://www.instagram.com/haelthyego/','https://www.facebook.com/Hea
 
 
 function preload(){
-  font = loadFont('HelveticaNeue-Light.otf');}
+  font = loadFont('socialmedia/HelveticaNeue-Light.otf');}
 
 function setup (){
 var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
@@ -26,7 +26,7 @@ HE_Height= 0.07*windowHeight;
 Höhe= windowHeight - HE_Height;
 Breite= windowWidth;
 
-HE_Logo=loadImage('HE.png');
+HE_Logo=loadImage('socialmedia/HE.png');
 
 anzahllinks=folder.length;
 
