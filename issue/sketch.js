@@ -65,7 +65,7 @@ if(width/height<1.5){
 //Links mit A ----------------------------------------------------------------------------------------------------------------
 for (var n=0;n<anzahllinks;n++){
   if(width/height>=1.5){  //Landscape
-    var a1 = createA(links[n],Schriftextra[n]);
+    var a1 = createA('https://www.healthyego.studio/issue/'+folder[n],Schriftextra[n]);
     a1.class('icon_landscape');
     a1.center();
 
@@ -74,7 +74,7 @@ for (var n=0;n<anzahllinks;n++){
     a1.position((n*Breite/anzahllinks), HE_Height);
   }
   if(width/height<1.5){  //Portrait
-    var a1 = createA(links[n],Schrift_Protrait[n]);
+    var a1 = createA('https://www.healthyego.studio/issue/'+folder[n],Schrift_Protrait[n]);
      a1.class('icon_portrait');
      a1.position(0, ((n*Höhe/anzahllinks)+HE_Height));
   }
