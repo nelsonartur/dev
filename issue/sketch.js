@@ -139,7 +139,7 @@ function Link0(){
   window.open('https://www.healthyego.studio/issue/'+folder[0],'_self');
 }
 function Link1(){
-    window.open('https://www.healthyego.studio/issue'+folder[0],'_self');
+    window.open('https://www.healthyego.studio/issue/'+folder[1],'_self');
 }
 function Link2(){
     window.open('https://www.healthyego.studio/'+folder[0],'_self');
