@@ -16,7 +16,7 @@ var Schrift_Protrait=['ASSOCIATION','EVENTS','ISSUE','BLOG','SOCIALMEDIA'];
 
 
 function preload(){
-  font = loadFont('HelveticaNeue-Light.otf');}
+  font = loadFont('frontpage/HelveticaNeue-Light.otf');}
 
 function setup (){
 var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
@@ -25,7 +25,7 @@ HE_Height= 0.07*windowHeight;
 Höhe= windowHeight - HE_Height;
 Breite= windowWidth;
 
-HE_Logo=loadImage('HE.png');
+HE_Logo=loadImage('frontpage/HE.png');
 
 anzahllinks=folder.length;
 
