@@ -5,8 +5,8 @@ var HE_Height; // Höhe "HE-HEAD"
 var HE_Logo;
 var font;
 
-var folder=['issueI','upcoming issue']; //Namen der Unterpunkte
-var Schrift=['I S S U E  I','U P C O M I N G  I S S U E'];
+var folder=['issueone','upcomingissue']; //Namen der Unterpunkte
+var Schrift=['I S S U E   I','U P C O M I N G   I S S U E'];
 var Schriftextra=['IS S UE  I','UP CO MI NG  IS S UE'];
 var Schrift_Protrait=['ISSUE I','UPCOMMING ISSUE'];
 
@@ -136,10 +136,10 @@ function draw(){
 
 //Hilfsfunktionen----------------------------------------------------------------------------------------------------------
 function Link0(){
-  window.open('https://www.healthyego.studio/'+folder[0],'_self');
+  window.open('https://www.healthyego.studio/issue/'+folder[0],'_self');
 }
 function Link1(){
-    window.open('https://www.healthyego.studio/'+folder[0],'_self');
+    window.open('https://www.healthyego.studio/issue'+folder[0],'_self');
 }
 function Link2(){
     window.open('https://www.healthyego.studio/'+folder[0],'_self');
