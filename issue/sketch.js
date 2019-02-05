@@ -7,7 +7,7 @@ var font;
 
 var folder=['issueone','upcomingissue']; //Namen der Unterpunkte
 var Schrift=['I S S U E   I','U P C O M I N G   I S S U E'];
-var Schriftextra=['IS S UE  I','UP CO MI NG  IS S UE'];
+var Schriftextra=['ISSUE ONE','UPCOMING ISSUE'];
 var Schrift_Protrait=['ISSUE I','UPCOMMING ISSUE'];
 
 
