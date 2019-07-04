@@ -80,16 +80,17 @@ figcaption {
 
 .medien {
 	margin-top:50%;
+	animation-name:asiadeckkraft;
+	animation-duration:5s;
+	animation-iteration-count:1;
+
 
 }
 
 .Bild3 {
 	width:1000px;
 	margin-bottom:40px;
-	animation-name:asiadeckkraft;
-	animation-duration:5s;
-	animation-iteration-count:1;
-
+	
 }
 
 .trailer {
