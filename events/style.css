@@ -79,11 +79,12 @@ figcaption {
 }
 
 .medien {
-	margin-top:20%;
+	margin-top:50%;
 
 }
 
 .Bild3 {
+	width:1000px;
 	margin-bottom:40px;
 	animation-name:asiadeckkraft;
 	animation-duration:5s;
@@ -92,5 +93,5 @@ figcaption {
 }
 
 .trailer {
-	width:700px;
+	width:1000px;
 }
