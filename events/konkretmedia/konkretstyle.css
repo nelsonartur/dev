@@ -62,7 +62,7 @@ img, object, embed, video {
     display: none;
 }
 
-medien {
+.medien {
 	margin-top:1200px;
 
 }
@@ -90,7 +90,7 @@ medien {
 }
 }
 
-medien {
+.medien {
 	margin-top:1200px;
 
 }
