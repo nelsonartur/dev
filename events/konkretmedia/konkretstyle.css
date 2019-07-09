@@ -42,6 +42,29 @@ img, object, embed, video {
     padding:0;        
 }
 
+.figcaption {
+	color:black;
+}
+
+/* Versuch iPhone X */
+
+@media only screen 
+    and (width : 375px) 
+    and (height : 635px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3)
+{
+.figcaption {
+	color:red;
+	}
+
+}
+
+
+
+
+
+
 /* Mobile Layout: 480px and below. */
   
 .gridContainer {
@@ -62,10 +85,6 @@ img, object, embed, video {
     display: none;
 }
 
-.medien {
-	margin-top:1200px;
-
-}
 
 }
 
@@ -91,10 +110,6 @@ img, object, embed, video {
 }
 
 
-.figcaption {
-	color:red;
-	
-}
 }
 
 
