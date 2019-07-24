@@ -15,12 +15,14 @@ var Schrift_Protrait=['ABIBALL','31|12','GARTEN','KONKRET'];
 
 
 
-function preload(){
-  font = loadFont('events/HelveticaNeue-Light.otf');} 
+/*function preload(){
+  font = loadFont('events/HelveticaNeue-Light.otf');} */
 
 function setup (){
 var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
+  font = loadFont('events/HelveticaNeue-Light.otf');
 
+  
 HE_Height= 0.07*windowHeight;
 Höhe= windowHeight - HE_Height;
 Breite= windowWidth;
