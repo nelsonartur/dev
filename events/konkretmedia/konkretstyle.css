@@ -44,24 +44,8 @@ img, object, embed, video {
 
 .figcaption {
 	color:black;
-}
-
-/* Versuch iPhone X */
-
-@media only screen 
-    and (width : 375px) 
-    and (height : 635px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3)
-{
-.figcaption {
-	color:red;
 	position:relative;
-	}
-
 }
-
-
 
 
 
