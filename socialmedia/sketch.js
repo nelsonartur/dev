@@ -16,11 +16,12 @@ var links=['https://www.instagram.com/haelthyego/','https://www.facebook.com/Hea
 
 
 
-function preload(){
-  font = loadFont('socialmedia/HelveticaNeue-Light.otf');}
+/*function preload(){
+  font = loadFont('socialmedia/HelveticaNeue-Light.otf');}*/
 
 function setup (){
 var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
+  font = loadFont('socialmedia/HelveticaNeue-Light.otf');
 
 HE_Height= 0.07*windowHeight;
 Höhe= windowHeight - HE_Height;
