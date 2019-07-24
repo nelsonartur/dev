@@ -5,10 +5,10 @@ var HE_Height; // Höhe "HE-HEAD"
 var HE_Logo;
 var font;
 
-var folder=['association','events','issue','blog','socialmedia']; //Namen der Unterpunkte
-var Schrift=['A S S O C I A T I O N','E V E N T S','I S S U E','B L O G','S O C I A L M E D I A'];
-var Schriftextra=['ASS OC IAT ION','EV EN TS','ISS UE','B L O G','SOC IAL MED IA'];
-var Schrift_Protrait=['ASSOCIATION','EVENTS','ISSUE','BLOG','SOCIALMEDIA'];
+var folder=['association','events','visualizer','socialmedia']; //Namen der Unterpunkte
+var Schrift=['A S S O Z I A T I O N','E V E N T S','V I S U A L I Z E R','S O C I A L M E D I A'];
+var Schriftextra=['ASS OZ IAT ION','EV EN TS','VIS UAL IZER','SOC IAL MED IA'];
+var Schrift_Protrait=['ASSOZIATION','EVENTS','VISUALIZER','SOCIALMEDIA'];
 
 
 
@@ -51,10 +51,10 @@ if(width/height>=1.5){
   div3.position((3*Breite/anzahllinks),HE_Height);
   div3.mousePressed(Link3);
 
-  var div4=createDiv();
+  /*var div4=createDiv();
   div4.class('div_style_landscape');
   div4.position((4*Breite/anzahllinks),HE_Height);
-  div4.mousePressed(Link4);
+  div4.mousePressed(Link4);*/
 
   
 }
@@ -79,10 +79,10 @@ if(width/height<1.5){
   div3.position(0,(3*Höhe/anzahllinks)+HE_Height);
   div3.mousePressed(Link3);
 
-  var div4=createDiv();
+  /*var div4=createDiv();
   div4.class('div_style_portrait');
   div4.position(0,(4*Höhe/anzahllinks)+HE_Height);
-  div4.mousePressed(Link4);
+  div4.mousePressed(Link4);*/
 }
 
 
@@ -175,6 +175,6 @@ function Link3(){
 function Link4(){
   window.open('https://www.healthyego.studio/'+folder[4],'_self');
 }
-function Link5(){
+/*function Link5(){
   window.open('https://www.healthyego.studio/'+folder[5],'_self');
-}
+}*/
