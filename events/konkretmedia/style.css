@@ -90,6 +90,7 @@ figcaption {
 }
 
 .Bild3 {
+	position:relative;
 	margin-bottom:40px;
 	width:1000px;
 	z-index:2;
@@ -97,6 +98,7 @@ figcaption {
 }
 
 .trailer {
+	position:relative;
 	width:1000px;
 	z-index:2;
 }
