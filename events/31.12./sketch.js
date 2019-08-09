@@ -31,10 +31,10 @@ function draw() {
 //Desktop-----------------------------------------------------------------------
 function macBackgroundLoadImages(){
   //loads all pictures needed to create macDesktop
-  bc = loadImage('HorizontalFootage/backgroundColor.jpeg');
-  dock = loadImage('HorizontalFootage/dock.png');
-  menu = loadImage('HorizontalFootage/menuBar.png');
-  healthyEgo = loadImage('HorizontalFootage/HealthyEgo.png');
+  bc = loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/backgroundColor.jpeg');
+  dock = loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/dock.png');
+  menu = loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/menuBar.png');
+  healthyEgo = loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/HealthyEgo.png');
 }
 function macBackground(){
   //displays all pictures needed to create macDesktop
@@ -66,7 +66,7 @@ class Picture {
     this.imagePath
   }
   load(){
-    this.imagePath=loadImage('HorizontalFootage/0'+this.picNumber+'.png');
+    this.imagePath=loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/0'+this.picNumber+'.png');
   }
 //show function is called within showImagesWithProperties()
   show() {
@@ -133,10 +133,10 @@ class TXT {
   }
 }
 function loadTextInformation(){
-  textEdit=loadImage('HorizontalFootage/textEdit.png');
-  helvetica=loadFont('Fonts/helvetica.ttf');
-  courierNew=loadFont('Fonts/courierNew.ttf');
-  helveticaBold=loadFont('Fonts/HelveticaBold.ttf');
+  textEdit=loadImage('https://www.healthyego.studio/events/31.12/HorizontalFootage/textEdit.png');
+  helvetica=loadFont('https://www.healthyego.studio/events/31.12/Fonts/helvetica.ttf');
+  courierNew=loadFont('https://www.healthyego.studio/events/31.12/Fonts/courierNew.ttf');
+  helveticaBold=loadFont('https://www.healthyego.studio/events/31.12/Fonts/HelveticaBold.ttf');
 }
 function informativeText(){
   if(textCounter>=-1){
