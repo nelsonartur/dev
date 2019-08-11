@@ -185,6 +185,22 @@ function informativeText(){
                groupE,//Kollaboration
                groupD,//HEALTHY EGO & SixTrois
                groupE]
+  
+  //text for describing; Eck.da.ten
+  information=["Location",
+               "Ausstellungs- u. Projektraum",
+               "31.12.17",
+               "EI",
+               "Dalbergstr. 54",
+               "63739 Aschaffenburg",
+               "______________________________________________",
+               "Artists",
+               "Yung $uijin",
+               "Soulja David",
+               "King Kool Jonas",
+               "______________________________________________",
+               "Kollaboration",
+               "HEALTHY EGO & SixTrois"]
 
   //creating and displaying Textelemts by creating new elements by calling TXT class
   for(var i=0; i<=textCounter; i++){
