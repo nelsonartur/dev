@@ -176,12 +176,12 @@ function informativeText(){
                groupC,//EI
                groupD,//Dalbergstr. 54
                groupD,//63739 Aschaffenburg
-               groupE,//______________________________________________
+               gSpace,//______________________________________________
                groupA,//Artists
                groupB,//Yung $uijin
                groupB,//Soulja David
                groupB,//King Kool Jonas
-               groupE,//______________________________________________
+               gSpace,//______________________________________________
                groupE,//Kollaboration
                groupD,//HEALTHY EGO & SixTrois
                groupE]
