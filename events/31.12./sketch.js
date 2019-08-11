@@ -48,7 +48,7 @@ function macBackground(){
   if(textCounter>-3){
     push();
     imageMode(CENTER);
-    image(healthyEgo,windowWidth/2,windowHeight/2,healthyEgo.width/4,healthyEgo.height/4);
+    image(healthyEgo,windowWidth/2,windowHeight/2,windowWidth/2,(windowWidth/2)/1.4187643);
     pop();
   }
 
