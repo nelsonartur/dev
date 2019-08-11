@@ -139,35 +139,36 @@ function loadTextInformation(){
   helveticaBold=loadFont('https://www.healthyego.studio/events/31.12./Fonts/HelveticaBold.ttf');
 }
 function informativeText(){
+  
+  if(windowWidth/windowHeight > 0.75){//Desktop
+    var textEditWidth = 2*textEdit.width/5;
+    var textEditHeight=2*textEdit.height/5;
+  }else{//mobile Devices
+    textEditWidth=windowWidth;
+    textEditHeight=windowWidth/0.931;
+  }
+
   if(textCounter>=-1){
-    image(textEdit,0,0,2*textEdit.width/5,2*textEdit.height/5)//textEdit screenshot
+    image(textEdit,0,0,textEditWidth,textEditHeight)//textEdit screenshot
   }
 
 
   //styling of Textelemts
-  groupA=[    helvetica, RIGHT,17,480];
-  groupB=[   courierNew, RIGHT,15,480];
-  groupC=[helveticaBold,  LEFT,25,46];
-  groupE=[    helvetica,  LEFT,17,46];
-  groupD=[   courierNew,  LEFT,15,46];
-  gSpace=[    helvetica,  LEFT,17,46];
-
-  //text for describing; Eck.da.ten
-  information=["Location",
-               "Ausstellungs- u. Projektraum",
-               "31.12.17",
-               "EI",
-               "Dalbergstr. 54",
-               "63739 Aschaffenburg",
-               "______________________________________________",
-               "Artists",
-               "Yung $uijin",
-               "Soulja David",
-               "King Kool Jonas",
-               "______________________________________________",
-               "Kollaboration",
-               "HEALTHY EGO & SixTrois"]
-
+  if(windowWidth/windowHeight > 0.75){//Desktop 
+    groupA=[    helvetica, RIGHT,17,480];
+    groupB=[   courierNew, RIGHT,15,480];
+    groupC=[helveticaBold,  LEFT,25,46];
+    groupE=[    helvetica,  LEFT,17,46];
+    groupD=[   courierNew,  LEFT,15,46];
+    gSpace=[    helvetica,  LEFT,17,46];
+  }else {//mobile Devices
+    groupA=[    helvetica, RIGHT,17,textEditWidth-width/11];
+    groupB=[   courierNew, RIGHT,15,textEditWidth-width/11];
+    groupC=[helveticaBold,  LEFT,25,width/11];
+    groupE=[    helvetica,  LEFT,17,width/11];
+    groupD=[   courierNew,  LEFT,15,width/11];
+    gSpace=[    helvetica,CENTER, 6,width/2];
+  }
   //joining styling with text
   font       =[groupA,//Location
                groupB,//Ausstellungs- u. Projektraum
