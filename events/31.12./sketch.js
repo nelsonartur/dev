@@ -32,18 +32,14 @@ function draw() {
 function macBackgroundLoadImages(){
   //loads all pictures needed to create macDesktop
   bc = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/backgroundColor.jpeg');
-  dock = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/dock.png');
-  menu = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/menuBar.png');
   healthyEgo = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/HealthyEgo.png');
 }
 function macBackground(){
   //displays all pictures needed to create macDesktop
   //displaying background in right shade
   background(bc);
-  //displaying Dock at bottom
-  image(dock, 0, height-(windowWidth/16.744), windowWidth, windowWidth/16.744);
-  //displaying MenuBar at top
-  image(menu,0,0,windowWidth,windowWidth/41.143);
+  
+  
   //displaying HealthyEgo sign in center after counter crossed threshold
   if(textCounter>-3){
     push();
