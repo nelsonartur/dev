@@ -31,13 +31,13 @@ function draw() {
 //Desktop-----------------------------------------------------------------------
 function macBackgroundLoadImages(){
   //loads all pictures needed to create macDesktop
-  bc = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/backgroundColor.jpeg');
+ 
   healthyEgo = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/HealthyEgo.png');
 }
 function macBackground(){
   //displays all pictures needed to create macDesktop
   //displaying background in right shade
-  background(bc);
+  background(255);
   
   
   //displaying HealthyEgo sign in center after counter crossed threshold
