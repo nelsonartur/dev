@@ -32,7 +32,7 @@ function draw() {
 function macBackgroundLoadImages(){
   //loads all pictures needed to create macDesktop
  
-  healthyEgo = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/brief HE.png');
+  healthyEgo = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/HealthyEgoLogoBlack.png');
 }
 function macBackground(){
   //displays all pictures needed to create macDesktop
