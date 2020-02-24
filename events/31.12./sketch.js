@@ -3,7 +3,7 @@ var PicNames = [];
 var cnv;
 var counter=0;
 var imageCounter=0;
-var textCounter=-3;
+var textCounter=-4;
 //------------------------------------------------------------------------------
 
 function setup() {
@@ -39,6 +39,11 @@ function macBackground(){
   //displaying background in right shade
   background(255);
   
+  if(textCounter=-4){
+    textAlign(CENTER, CENTER);
+    textSize(32);
+    text('click', windowWidth/2, windowHeight/2);
+  }
   
   //displaying HealthyEgo sign in center after counter crossed threshold
   if(textCounter>-3){
