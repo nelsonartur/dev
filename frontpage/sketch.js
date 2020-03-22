@@ -30,7 +30,7 @@ function setup (){
     var subpage = createA(domainLevel + subpages[i],subpages[i]);
     subpage.addClass('subpages');
     var xPosition = 0;
-    var yPosition = imageHeight + i*40;
+    var yPosition = imageHeight + i*50;
     subpage.position(xPosition,yPosition);
   }
 
@@ -41,18 +41,27 @@ function setup (){
    images[i].style('max-width',windowWidth + 'px');
  }
 
-
+offset = windowWidth-25;
   paragraphs = selectAll('.subpages');
   for(var i=0; i<paragraphs.length; i++){
     paragraphs[i].mouseOver(highlight);
     paragraphs[i].mouseOut(unhighlight);
+    paragraphs[i].style('width',offset + 'px');
   }
 }
 
 function highlight(){
-  this.style('background-color','yellow')
+  this.style('color','white');
+  this.style('text-transform', 'uppercase');
+  this.style('font-weight', 'bold');
+  var body = select('body');
+  body.style('background-color', 'black');
 }
 
 function unhighlight(){
-  this.style('background-color','#666666')
+  this.style('color','black');
+  this.style('text-transform', 'lowercase');
+  this.style('font-weight', 'normal');
+  var body = select('body');
+  body.style('background-color', 'white');
 }
