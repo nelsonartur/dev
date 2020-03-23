@@ -31,14 +31,14 @@ function draw() {
 //Desktop-----------------------------------------------------------------------
 function macBackgroundLoadImages(){
   //loads all pictures needed to create macDesktop
- 
-  healthyEgo = loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/HealthyEgoLogoBlack.png');
+
+  healthyEgo = loadImage('../source/31.12./HealthyEgoLogoBlack.png');
 }
 function macBackground(){
   //displays all pictures needed to create macDesktop
   //displaying background in right shade
   background(255);
-  
+
   if(textCounter<=-4){
   push();
     textAlign(CENTER, CENTER);
@@ -46,7 +46,7 @@ function macBackground(){
     text('click', windowWidth/2, windowHeight/2);
   pop();
   }
-  
+
   //displaying HealthyEgo sign in center after counter crossed threshold
   if(textCounter>-3){
     push();
@@ -69,7 +69,7 @@ class Picture {
     this.imagePath
   }
   load(){
-    this.imagePath=loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/0'+this.picNumber+'.png');
+    this.imagePath=loadImage('../source/31.12./0'+this.picNumber+'.png');
   }
 //show function is called within showImagesWithProperties()
   show() {
@@ -136,13 +136,13 @@ class TXT {
   }
 }
 function loadTextInformation(){
-  textEdit=loadImage('https://www.healthyego.studio/events/31.12./HorizontalFootage/textEdit.png');
-  helvetica=loadFont('https://www.healthyego.studio/events/31.12./Fonts/helvetica.ttf');
-  courierNew=loadFont('https://www.healthyego.studio/events/31.12./Fonts/courierNew.ttf');
-  helveticaBold=loadFont('https://www.healthyego.studio/events/31.12./Fonts/HelveticaBold.ttf');
+  textEdit=loadImage('../source/31.12./textEdit.png');
+  helvetica=loadFont('../source/fonts/helvetica.ttf');
+  courierNew=loadFont('../source/fonts/courierNew.ttf');
+  helveticaBold=loadFont('../source/fonts/HelveticaBold.ttf');
 }
 function informativeText(){
-  
+
   if(windowWidth/windowHeight > 0.75){//Desktop
     var textEditWidth = 2*textEdit.width/5;
     var textEditHeight=2*textEdit.height/5;
@@ -157,7 +157,7 @@ function informativeText(){
 
 
   //styling of Textelemts
-  if(windowWidth/windowHeight > 0.75){//Desktop 
+  if(windowWidth/windowHeight > 0.75){//Desktop
     groupA=[    helvetica, RIGHT,17,480];
     groupB=[   courierNew, RIGHT,15,480];
     groupC=[helveticaBold,  LEFT,25,46];
@@ -188,7 +188,7 @@ function informativeText(){
                groupE,//Kollaboration
                groupD,//HEALTHY EGO & SixTrois
                groupE]
-  
+
   //text for describing; Eck.da.ten
   information=["Location",
                "Ausstellungs- u. Projektraum",
