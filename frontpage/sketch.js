@@ -2,36 +2,38 @@
 //Input: Array Subpages[] in variabler Länge
 //Output: Seiten Aufteilung in Abhängikeit von Subpages.lenght
 
+//Styling erfolgt in html file
+
 
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+
+//inhalt des Arrays kann für neue Menu Ebene genutzt werden:
+//gewünschte Namen und amnzahl in Array schreiben
+//(!) .html dadei mit gleichen name muss im Backend vorhanden sein, sonst funktioniert link nicht
 var subpages = [];
-
-
+subpages=["events","association","socialmedia"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
-var domainLevel = 'https://www.healthyego.studio/';
+var domainLevel = '../'; //var domainLevel = 'http://healthyego.studio/';
+
+
+
+
 
 function setup (){
-  //inhalt des Arrays kann für neue Menu Ebene genutzt werden:
-  //gewünschte Namen und amnzahl in Array schreiben
-  //(!) .html dadei mit gleichen name muss im Backend vorhanden sein, osnt funktioniert link nicht
-  subpages=["events","association","socialmedia"];
 
   //erstellt soviele html paragrathen wie es elemente im Array subpages gibt;
-  //ordnent diese zufällig, jedesmal anders, auf der Seite an
-  //Styling erfolgt in html file
   //Die ImageHeight ergibt sich aus der WindowHeight mal der Bildhöhe durch
   //die Bildbreite in px, bei Logo veränderung anpassen;
   //imageHeight wird genutz zur anordnung der links
-
   var imageHeight= windowWidth*(2100/2085);
   for(var i=0;i<subpages.length;i++ ){
-    var subpage = createA(domainLevel + subpages[i],subpages[i]);
+    var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
     subpage.addClass('subpages');
     var xPosition = 0;
-    var yPosition = imageHeight + i*50;
-    subpage.position(xPosition,yPosition);
+    var yPosition = imageHeight* 1.06 + i*50; //so schneiden sich logo und subpages nicht
+    subpage.position(xPosition,yPosition, 'absolute');
   }
 
 
@@ -41,27 +43,41 @@ function setup (){
    images[i].style('max-width',windowWidth + 'px');
  }
 
-offset = windowWidth-25;
+
+//erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
+  offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
   paragraphs = selectAll('.subpages');
   for(var i=0; i<paragraphs.length; i++){
     paragraphs[i].mouseOver(highlight);
     paragraphs[i].mouseOut(unhighlight);
-    paragraphs[i].style('width',offset + 'px');
+    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
   }
 }
 
+
+
+
+
+//Hover für links des subpages Array
 function highlight(){
+  //stylet <a>
   this.style('color','white');
   this.style('text-transform', 'uppercase');
   this.style('font-weight', 'bold');
+
+  //stylet <body>
   var body = select('body');
   body.style('background-color', 'black');
 }
 
+
 function unhighlight(){
+  //stylet <a>
   this.style('color','black');
   this.style('text-transform', 'lowercase');
   this.style('font-weight', 'normal');
+
+  //stylet <body>
   var body = select('body');
   body.style('background-color', 'white');
 }

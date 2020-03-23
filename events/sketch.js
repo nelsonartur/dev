@@ -1,172 +1,83 @@
-var anzahllinks; // Anzahl der Spalten, errechnet sich aus "folder"-Länge
-var Höhe; // Höhe ohne "HE-HEAD"
-var Breite;
-var HE_Height; // Höhe "HE-HEAD"
-var HE_Logo;
-var font;
+//Code erstellt Seitenaufteilung abhägnig von der Länge des Arrays, stylet, layoutet und verlinkt diese:
+//Input: Array Subpages[] in variabler Länge
+//Output: Seiten Aufteilung in Abhängikeit von Subpages.lenght
 
-var folder=['abiball','31.12','garten','konkret']; //Namen der Unterpunkte
-var Schrift=['A B I B A L L','3 1 | 1 2','G A R T E N','K O N K R E T'];
-var Schriftextra=['ABI BALL','31 12','GA RT EN','KO NK RE T'];
-var Schrift_Protrait=['ABIBALL','31|12','GARTEN','KONKRET'];
+//Styling erfolgt in html file
 
 
+//_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+//inhalt des Arrays kann für neue Menu Ebene genutzt werden:
+//gewünschte Namen und amnzahl in Array schreiben
+//(!) .html dadei mit gleichen name muss im Backend vorhanden sein, sonst funktioniert link nicht
+var subpages = [];
+subpages=["31.12","garten","konkret"];
+
+//Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
+var domainLevel = '../events/'; //var domainLevel = 'http://healthyego.studio/';
 
 
 
 
-/*function preload(){
-  font = loadFont('events/HelveticaNeue-Light.otf');} */
 
 function setup (){
-var cnv=createCanvas(windowWidth, windowHeight); cnv.id('cnv');
-  font = loadFont('events/HelveticaNeue-Light.otf');
 
-  
-HE_Height= 0.07*windowHeight;
-Höhe= windowHeight - HE_Height;
-Breite= windowWidth;
-
-HE_Logo=loadImage('events/HE.png');
-
-anzahllinks=folder.length;
-
-//DIV-Links,----nicht optimal gelöst, eig. for-loop; Links mechanisch ändern-------------------------------------------------
-if(width/height>=1.5){
-  var div0=createDiv();
-  div0.class('div_style_landscape');
-  div0.position((0*Breite/anzahllinks),HE_Height);
-  div0.mousePressed(Link0);
-
-  var div1=createDiv();
-  div1.class('div_style_landscape');
-  div1.position((1*Breite/anzahllinks),HE_Height);
-  div1.mousePressed(Link1);
-
-  var div2=createDiv();
-  div2.class('div_style_landscape');
-  div2.position((2*Breite/anzahllinks),HE_Height);
-  div2.mousePressed(Link2);
-
-  var div3=createDiv();
-  div3.class('div_style_landscape');
-  div3.position((3*Breite/anzahllinks),HE_Height);
-  div3.mousePressed(Link3);
-
- 
-}
-if(width/height<1.5){
-  var div0=createDiv();
-  div0.class('div_style_portrait');
-  div0.position(0,(0*Höhe/anzahllinks)+HE_Height);
-  div0.mousePressed(Link0);
-
-  var div1=createDiv();
-  div1.class('div_style_portrait');
-  div1.position(0,(1*Höhe/anzahllinks)+HE_Height);
-  div1.mousePressed(Link1);
-
-  var div2=createDiv();
-  div2.class('div_style_portrait');
-  div2.position(0,(2*Höhe/anzahllinks)+HE_Height);
-  div2.mousePressed(Link2);
-
-  var div3=createDiv();
-  div3.class('div_style_portrait');
-  div3.position(0,(3*Höhe/anzahllinks)+HE_Height);
-  div3.mousePressed(Link3);
-}
-
-
-
-//Links mit A ----------------------------------------------------------------------------------------------------------------
-for (var n=0;n<anzahllinks;n++){
-  if(width/height>=1.5){  //Landscape
-    var a1 = createA('https://www.healthyego.studio/events/'+folder[n],Schriftextra[n]);
-    a1.class('icon_landscape');
-    a1.center();
-
-    //a1.position((n*Breite/anzahllinks), (Höhe/2)+HE_Height);
-
-    a1.position((n*Breite/anzahllinks), HE_Height);
+  //erstellt soviele html paragrathen wie es elemente im Array subpages gibt;
+  //Die ImageHeight ergibt sich aus der WindowHeight mal der Bildhöhe durch
+  //die Bildbreite in px, bei Logo veränderung anpassen;
+  //imageHeight wird genutz zur anordnung der links
+  var imageHeight= windowWidth*(2100/2085);
+  for(var i=0;i<subpages.length;i++ ){
+    var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
+    subpage.addClass('subpages');
+    var xPosition = 0;
+    var yPosition = imageHeight* 1.06 + i*50; //so schneiden sich logo und subpages nicht
+    subpage.position(xPosition,yPosition, 'absolute');
   }
-  if(width/height<1.5){  //Portrait
-    var a1 = createA('https://www.healthyego.studio/events/'+folder[n],Schrift_Protrait[n]);
-     a1.class('icon_portrait');
-     a1.position(0, ((n*Höhe/anzahllinks)+HE_Height));
+
+
+//passt die größe des Logos an die windowWidth an
+ var images = selectAll('img');
+ for(var i=0; i<images.length; i++){
+   images[i].style('max-width',windowWidth + 'px');
+ }
+
+
+//erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
+  offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
+  paragraphs = selectAll('.subpages');
+  for(var i=0; i<paragraphs.length; i++){
+    paragraphs[i].mouseOver(highlight);
+    paragraphs[i].mouseOut(unhighlight);
+    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
   }
 }
 
 
 
-//Canvas in html eingliedern--------------------------------------------------------------------------------------------------
-var canvas= createDiv();
-canvas.id('canvas');
-canvas.child('cnv');
-}
 
-function draw(){
- //background(255);
- clear();
 
- //HE_Logo---------------------------------------------------------------------------------------------------------------
- var scale=0.35
- image(HE_Logo,scale*HE_Height,scale*HE_Height,787*((1-2*scale)*HE_Height/100),(1-2*scale)*HE_Height);
+//Hover für links des subpages Array
+function highlight(){
+  //stylet <a>
+  this.style('color','white');
+  this.style('text-transform', 'uppercase');
+  this.style('font-weight', 'bold');
 
- //Linien----------------------------------------------------------------------------------------------------------------
- stroke(0);
- strokeWeight(0.5);
- line(0,HE_Height,width,HE_Height);
-
- if (width/height>=1.5){
-   for (var i=0; i<= anzahllinks; i++){
-     line(i*Breite/anzahllinks,HE_Height,i*Breite/anzahllinks,windowHeight);
-   }
- }
- if(width/height<1.5){
-   for (var i=0; i<= anzahllinks; i++){
-     line(0,(i*Höhe/anzahllinks)+HE_Height,Breite,(i*Höhe/anzahllinks)+HE_Height);
-   }
- }
-
- //text------------------------------------------------------------------------------------------------------------------
-
- textSize(15);
- textFont(font);
- textAlign(CENTER, CENTER);
- for (var n=0;n<=anzahllinks;n++){
-   if(width/height>=1.5){
-     text( Schrift[n-1], (n*Breite/anzahllinks)-(Breite/anzahllinks)/2, (Höhe/2)+HE_Height);
-   }
-   if(width/height<1.5){
-      text( Schrift[n-1], (width/2), ((n*Höhe/anzahllinks)+HE_Height)-(Höhe/anzahllinks/2));
-   }
- }
+  //stylet <body>
+  var body = select('body');
+  body.style('background-color', 'black');
 }
 
 
+function unhighlight(){
+  //stylet <a>
+  this.style('color','black');
+  this.style('text-transform', 'lowercase');
+  this.style('font-weight', 'normal');
 
-
-
-
-
-
-//Hilfsfunktionen----------------------------------------------------------------------------------------------------------
-function Link0(){
-  window.open('https://www.healthyego.studio/events/'+folder[0],'_self');
-}
-function Link1(){
-  window.open('https://www.healthyego.studio/events/'+folder[1],'_self');
-}
-function Link2(){
-  window.open('https://www.healthyego.studio/events/'+folder[2],'_self');
-}
-function Link3(){
-  window.open('https://www.healthyego.studio/events/'+folder[3],'_self');
-}
-function Link4(){
-  window.open('https://www.healthyego.studio/events/'+folder[4],'_self');
-}
-function Link5(){
-  window.open('https://www.healthyego.studio/'+folder[5],'_self');
+  //stylet <body>
+  var body = select('body');
+  body.style('background-color', 'white');
 }
