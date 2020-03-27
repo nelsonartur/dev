@@ -23,6 +23,8 @@ var domainLevel = '../'; //var domainLevel = 'http://healthyego.studio/';
 
 function setup (){
 
+  setupCurtain();
+
   //erstellt soviele html paragrathen wie es elemente im Array subpages gibt;
   //Die ImageHeight ergibt sich aus der WindowHeight mal der Bildhöhe durch
   //die Bildbreite in px, bei Logo veränderung anpassen;
@@ -55,9 +57,6 @@ function setup (){
 }
 
 
-
-
-
 //Hover für links des subpages Array
 function highlight(){
   //stylet <a>
@@ -70,7 +69,6 @@ function highlight(){
   body.style('background-color', 'black');
 }
 
-
 function unhighlight(){
   //stylet <a>
   this.style('color','black');
@@ -81,3 +79,7 @@ function unhighlight(){
   var body = select('body');
   body.style('background-color', 'white');
 }
+
+
+
+//curtain effect
