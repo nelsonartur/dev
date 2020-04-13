@@ -58,13 +58,15 @@ function curtainPosition(counter){
   //Löscht Elemnte nachdem sie aus dem Bild sind und setzt start auf false um den counter zu stoppen
   //Anmerkungen: Offset wichtig als "schnittrand"
 
-  leftRec.style('height', windowHeight+safetyOffset+'px');
+  leftRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
   leftRec.style('width' , windowWidth/2+safetyOffset-counter+'px');
+  leftRec.style('z-index' , 1);
   leftRec.style('background-color','#000000');
   leftRec.position(-safetyOffset+1, 0);
 
-  rightRec.style('height', windowHeight+safetyOffset+'px');
+  rightRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da 
   rightRec.style('width' , windowWidth/2+safetyOffset+counter+'px');
+  rightRec.style('z-index' , 1);
   rightRec.style('background-color','#000000');
   rightRec.position(windowWidth/2+counter, 0);
 
@@ -85,4 +87,5 @@ function logoStyle(){
   //(!) Fehlerpotenzial
   logo.style('max-width','100%');
   logo.position(0,windowHeight/3);
+  logo.style('z-index' , 2);
 }

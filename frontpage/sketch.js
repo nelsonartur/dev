@@ -25,6 +25,14 @@ function setup (){
 
   setupCurtain();
 
+  if(windowWidth/windowHeight>1){
+    setupHorizontal();
+  }else{
+    setupVertical();
+  }
+}
+
+function setupVertical(){
   //erstellt soviele html paragrathen wie es elemente im Array subpages gibt;
   //Die ImageHeight ergibt sich aus der WindowHeight mal der Bildhöhe durch
   //die Bildbreite in px, bei Logo veränderung anpassen;
@@ -32,7 +40,7 @@ function setup (){
   var imageHeight= windowWidth*(2100/2085);
   for(var i=0;i<subpages.length;i++ ){
     var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
-    subpage.addClass('subpages');
+    subpage.addClass('subpagesVertical');
     var xPosition = 0;
     var yPosition = imageHeight* 1.06 + i*50; //so schneiden sich logo und subpages nicht
     subpage.position(xPosition,yPosition, 'absolute');
@@ -48,7 +56,41 @@ function setup (){
 
 //erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
   offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
-  paragraphs = selectAll('.subpages');
+  paragraphs = selectAll('.subpagesVertical');
+  for(var i=0; i<paragraphs.length; i++){
+    paragraphs[i].mouseOver(highlight);
+    paragraphs[i].mouseOut(unhighlight);
+    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
+  }
+}
+
+function setupHorizontal(){
+  var imageHeight = windowWidth*0.15 * 1.0579;
+  var imgX = windowWidth*0.5-windowWidth*0.15;
+  var imgY = windowHeight*0.5-imageHeight/2
+  var offset= imageHeight/subpages.length;
+
+  for(var i=0;i<subpages.length;i++ ){
+    var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
+    subpage.addClass('subpagesHorizontal');
+    var xPosition = windowWidth*0.55;
+    var yPosition = imgY + i*offset; //so schneiden sich logo und subpages nicht
+    subpage.position(xPosition,yPosition, 'absolute');
+  }
+
+
+//passt die größe des Logos an die windowWidth an
+ var images = selectAll('img');
+ for(var i=0; i<images.length; i++){
+   images[i].style('max-width', '15%');
+   images[i].position(imgX,imgY, 'absolute');
+
+ }
+
+
+//erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
+  offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
+  paragraphs = selectAll('.subpagesHorizontal');
   for(var i=0; i<paragraphs.length; i++){
     paragraphs[i].mouseOver(highlight);
     paragraphs[i].mouseOut(unhighlight);
@@ -79,7 +121,3 @@ function unhighlight(){
   var body = select('body');
   body.style('background-color', 'white');
 }
-
-
-
-//curtain effect
