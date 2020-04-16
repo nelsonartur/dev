@@ -23,7 +23,7 @@ var domainLevel = '../events/'; //var domainLevel = 'http://healthyego.studio/';
 
 function setup (){
 
-  
+
 
   if(windowWidth/windowHeight>1){
     setupHorizontal();
@@ -76,6 +76,7 @@ function setupHorizontal(){
     var xPosition = windowWidth*0.53;
     var yPosition = imgY + i*offset; //so schneiden sich logo und subpages nicht
     subpage.position(xPosition,yPosition, 'absolute');
+    subpage.style('line-height', offset + 'px');
   }
 
 

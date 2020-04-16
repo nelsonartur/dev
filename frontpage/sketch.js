@@ -65,17 +65,18 @@ function setupVertical(){
 }
 
 function setupHorizontal(){
-  var imageHeight = windowWidth*0.15 * 1.0579;
+  var imageHeight = windowWidth*0.15 * 1.0579;// he.studio logo höhe
   var imgX = windowWidth*0.5-windowWidth*0.15;
   var imgY = windowHeight*0.5-imageHeight/2
-  var offset= imageHeight/subpages.length;
+  var offset= imageHeight/subpages.length;//zeilen höhe für subpages
 
   for(var i=0;i<subpages.length;i++ ){
     var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
     subpage.addClass('subpagesHorizontal');
-    var xPosition = windowWidth*0.55;
+    var xPosition = windowWidth*0.53;
     var yPosition = imgY + i*offset; //so schneiden sich logo und subpages nicht
-    subpage.position(xPosition,yPosition, 'absolute');
+    subpage.position(xPosition,yPosition);
+    subpage.style('line-height', offset + 'px');
   }
 
 

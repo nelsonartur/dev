@@ -64,8 +64,8 @@ function curtainPosition(counter){
   leftRec.style('background-color','#000000');
   leftRec.position(-safetyOffset+1, 0);
 
-  rightRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da 
-  rightRec.style('width' , windowWidth/2+safetyOffset+counter+'px');
+  rightRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
+  rightRec.style('width' , windowWidth/2+safetyOffset-counter+'px');
   rightRec.style('z-index' , 1);
   rightRec.style('background-color','#000000');
   rightRec.position(windowWidth/2+counter, 0);
