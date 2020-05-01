@@ -12,7 +12,7 @@
 //gewünschte Namen und amnzahl in Array schreiben
 //(!) .html dadei mit gleichen name muss im Backend vorhanden sein, sonst funktioniert link nicht
 var subpages = [];
-subpages=["soundcloud","instagram","facebook","tumblr"];
+subpages=["Soundcloud","Instagram","Facebook","Tumblr"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
 var domainLevel = '../socialmedia/'; //var domainLevel = 'http://healthyego.studio/';
@@ -113,7 +113,7 @@ function highlight(){
 function unhighlight(){
   //stylet <a>
   this.style('color','black');
-  this.style('text-transform', 'lowercase');
+  this.style('text-transform', 'capitalize');
   this.style('font-weight', 'normal');
 
   //stylet <body>
