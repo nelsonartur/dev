@@ -12,7 +12,7 @@
 //gewünschte Namen und amnzahl in Array schreiben
 //(!) .html dadei mit gleichen name muss im Backend vorhanden sein, sonst funktioniert link nicht
 var subpages = [];
-subpages=["fotografisch","audiovisuell","andere"];
+subpages=["fotografisch","audiovisuell","gedruckt","plastisch"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
 var domainLevel = '../arbeiten/'; //var domainLevel = 'http://healthyego.studio/';
