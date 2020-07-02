@@ -15,7 +15,7 @@ var subpages = [];
 subpages=["Assoziation","Veranstaltungen","Arbeiten","Soziale Medien"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
-var domainLevel = '../'; //var domainLevel = 'http://healthyego.studio/';
+var domainLevel = './'; //var domainLevel = 'http://healthyego.studio/';
 
 
 
