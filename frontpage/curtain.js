@@ -27,7 +27,7 @@ function setupCurtain(){
   //läd HElogo und ruft go() aus, sobald HElogo fertig geladen wurde
   leftRec = createDiv();
   rightRec= createDiv();
-  logo= createImg('../source/logos/HElogo.png','','',go());
+  logo= createImg('./source/logos/HElogo.png','','',go());
 }
 
 function draw(){
