@@ -23,7 +23,6 @@ var domainLevel = './'; //var domainLevel = 'http://healthyego.studio/';
 
 function setup (){
 
-  setupCurtain();
 
   if(windowWidth/windowHeight>1){
     setupHorizontal();
