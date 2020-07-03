@@ -15,7 +15,7 @@ var subpages = [];
 subpages=["31.12","garten","konkret"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
-var domainLevel = './'; //var domainLevel = 'http://healthyego.studio/';
+var domainLevel = './veranstaltungen/'; //var domainLevel = 'http://healthyego.studio/';
 
 
 
