@@ -12,7 +12,7 @@
 //gewünschte Namen und amnzahl in Array schreiben
 //(!) .html dadei mit gleichen name muss im Backend vorhanden sein, sonst funktioniert link nicht
 var subpages = [];
-subpages=["assoziation","veranstaltungen","arbeiten","soziale medien"];
+subpages=["assoziation","veranstaltungen","arbeiten","socialmedia"];
 
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
 var domainLevel = './'; //var domainLevel = 'http://healthyego.studio/';
@@ -33,6 +33,11 @@ function setup (){
 }
 
 function setupVertical(){
+  //Variablen für die Anordnung:
+  var imageWidth=windowWidth*0.3; //Das logo ist 30% der Breite groß
+  var imageMiddle=windowWidth/2-imageWidth/2; //x-koordinate damit logo genau in der mitte platziert ist
+
+
   //erstellt soviele html paragrathen wie es elemente im Array subpages gibt;
   //Die ImageHeight ergibt sich aus der WindowHeight mal der Bildhöhe durch
   //die Bildbreite in px, bei Logo veränderung anpassen;
@@ -41,8 +46,8 @@ function setupVertical(){
   for(var i=0;i<subpages.length;i++ ){
     var subpage = createA(domainLevel + subpages[i]+'.html',subpages[i]);
     subpage.addClass('subpagesVertical');
-    var xPosition = 0;
-    var yPosition = imageHeight* 1.06 + i*50; //so schneiden sich logo und subpages nicht
+    var xPosition = imageMiddle; // so alignen text und logo
+    var yPosition = windowHeight*0.5+i*(windowHeight*0.4/subpages.length); //Links erst in der unteren Häl
     subpage.position(xPosition,yPosition, 'absolute');
   }
 
@@ -50,7 +55,8 @@ function setupVertical(){
 //passt die größe des Logos an die windowWidth an
  var images = selectAll('img');
  for(var i=0; i<images.length; i++){
-   images[i].style('max-width',windowWidth + 'px');
+    images[i].style('max-width',imageWidth + 'px');//images[i].style('max-width',windowWidth + 'px');
+    images[i].position(imageMiddle,windowHeight*0.17, 'absolute');
  }
 
 
@@ -63,6 +69,7 @@ function setupVertical(){
     paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
   }
 }
+
 
 function setupHorizontal(){
   var imageHeight = windowWidth*0.15 * 1.0579;// he.studio logo höhe
@@ -98,6 +105,7 @@ function setupHorizontal(){
     paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
   }
 }
+
 
 
 //Hover für links des subpages Array
