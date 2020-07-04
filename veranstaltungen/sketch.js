@@ -99,9 +99,10 @@ function setupHorizontal(){
   offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
   paragraphs = selectAll('.subpagesHorizontal');
   for(var i=0; i<paragraphs.length; i++){
-    paragraphs[i].mouseOver(highlight);
-    paragraphs[i].mouseOut(unhighlight);
-    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
+
+      paragraphs[i].mouseOver(highlight);
+      paragraphs[i].mouseOut(unhighlight);
+      paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
   }
 }
 

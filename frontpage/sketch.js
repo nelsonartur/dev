@@ -17,10 +17,6 @@ subpages=["assoziation","veranstaltungen","arbeiten","socialmedia"];
 //Verzeichnisdomain, unterhalb welcher die Seiten aufgehängt werden
 var domainLevel = './'; //var domainLevel = 'http://healthyego.studio/';
 
-
-
-
-
 function setup (){
 
   setupCurtain();
@@ -58,18 +54,7 @@ function setupVertical(){
     images[i].style('max-width',imageWidth + 'px');//images[i].style('max-width',windowWidth + 'px');
     images[i].position(imageMiddle,windowHeight*0.17, 'absolute');
  }
-
-
-//erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
-  offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
-  paragraphs = selectAll('.subpagesVertical');
-  for(var i=0; i<paragraphs.length; i++){
-    paragraphs[i].mouseOver(highlight);
-    paragraphs[i].mouseOut(unhighlight);
-    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
-  }
 }
-
 
 function setupHorizontal(){
   var imageHeight = windowWidth*0.15 * 1.0579;// he.studio logo höhe
@@ -94,39 +79,4 @@ function setupHorizontal(){
    images[i].position(imgX,imgY, 'absolute');
 
  }
-
-
-//erstellt Array aller <a> s, ordnet jedem elemente highlight und unhighlight methode zu
-  offset = windowWidth-25; // so geht right aling nicht bis zum rechten rand
-  paragraphs = selectAll('.subpagesHorizontal');
-  for(var i=0; i<paragraphs.length; i++){
-    paragraphs[i].mouseOver(highlight);
-    paragraphs[i].mouseOut(unhighlight);
-    paragraphs[i].style('width',offset + 'px'); //wichtig für right-align der subpages links;
-  }
-}
-
-
-
-//Hover für links des subpages Array
-function highlight(){
-  //stylet <a>
-  this.style('color','white');
-  this.style('text-transform', 'uppercase');
-  this.style('font-weight', 'bold');
-
-  //stylet <body>
-  var body = select('body');
-  body.style('background-color', 'black');
-}
-
-function unhighlight(){
-  //stylet <a>
-  this.style('color','black');
-  this.style('text-transform', 'capitalize');
-  this.style('font-weight', 'normal');
-
-  //stylet <body>
-  var body = select('body');
-  body.style('background-color', 'white');
 }
