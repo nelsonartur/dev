@@ -47,6 +47,50 @@
       body {
         background-color: white;
       }
+
+
+
+      #popup{
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background: blue;
+        opacity: 0.94;
+        padding: 10%;
+
+        text-align: justify;
+        max-width: 100%;
+        font-family: Menlo;
+        color: white;
+        font-size: 25px;
+      }
+
+      #popup_link{
+        color: white;
+      }
+
+      #popup_button{
+        background-color: white; /* Green */
+        border: none;
+        color: blue;
+        padding: 15px 32px;
+        text-align: justify;
+        display: inline-block;
+        font-size: 25px;
+        font-family: Menlo;
+        border-radius: 4px;
+        transition-duration: 0.4s;
+      }
+
+      #popup_button:hover {
+        background-color: #dfdfdf;
+        color: white;
+      }
+
+
+
    </style>
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -64,5 +108,23 @@
     <a  href="https://www.healthyego.studio/">
       <img src="source/logos/HE.studio.png" alt="HE_Logo" >
     </a>
+
+    <div id="popup">
+      <p>Wir nutzen Google Analytics,
+         um unseren Internet Auftritt zu verbessern.
+         So kann der bereitgestellte Content
+         besser auf eure Anforderungen anpasst werden.
+         Mehr Infos findest du
+         <a href="https://analytics.google.com/analytics/web/" id="popup_link">hier</a>.
+      </p>
+
+      <p><i>We use Google Analytics to enhance our website.
+         Google Analytics helps us to adjust our content to your needs.
+         More information can be found
+         <a href="https://analytics.google.com/analytics/web/" id="popup_link">here</a>.<i>
+      </p>
+
+      <button type="button" id="popup_button">Okay</button>
+    </div>
   </body>
 </html>

@@ -14,6 +14,10 @@ var start=false;//boolean zum start der Animation, damit Animation nicht started
 var logo;//Variable in der Logo gespeichert wird, wird gelöscht sobald Curtains auseinaderlaufen
 
 
+var button;
+var popup;
+var hidden=true;
+
 //Functions_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 /*
 function setup(){
@@ -23,6 +27,11 @@ function setup(){
 */
 
 function setupCurtain(){
+  button = select('#popup_button');
+  button.mousePressed(removeDiv);
+  popup=select('#popup');
+  popup.hide();
+
   //Erstellt Linkes und Rechtes Html Div Element,
   //läd HElogo und ruft go() aus, sobald HElogo fertig geladen wurde
   leftRec = createDiv();
@@ -58,13 +67,13 @@ function curtainPosition(counter){
   //Löscht Elemnte nachdem sie aus dem Bild sind und setzt start auf false um den counter zu stoppen
   //Anmerkungen: Offset wichtig als "schnittrand"
 
-  leftRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
+  leftRec.style('height', 1*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
   leftRec.style('width' , windowWidth/2+safetyOffset-counter+'px');
   leftRec.style('z-index' , 1);
   leftRec.style('background-color','#000000');
   leftRec.position(-safetyOffset+1, 0);
 
-  rightRec.style('height', 2*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
+  rightRec.style('height', 1*windowHeight+safetyOffset+'px'); //dirty fix: Verhindert sehen Hintergrund durch scrollen wenn curtain noch da
   rightRec.style('width' , windowWidth/2+safetyOffset-counter+'px');
   rightRec.style('z-index' , 1);
   rightRec.style('background-color','#000000');
@@ -74,6 +83,10 @@ function curtainPosition(counter){
     rightRec.remove();
     leftRec.remove();
     start=false;
+    if(millis()>3300){
+      showDiv();
+    }
+
   }
 }
 
@@ -88,4 +101,13 @@ function logoStyle(){
   logo.style('max-width','100%');
   logo.position(0,windowHeight/3);
   logo.style('z-index' , 2);
+}
+
+function removeDiv() {
+  popup.remove();
+  start=true;
+}
+
+function showDiv(){
+  popup.show();
 }
