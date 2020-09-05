@@ -1,7 +1,8 @@
 var button;
-var trigger;
 var popup;
 var hidden=true;
+
+var trigger;
 
 
 
@@ -9,18 +10,15 @@ function setup() {
   button = select('#popup_button');
   button.mousePressed(removeDiv);
 
-  trigger= createButton('trigger')
-  trigger.mousePressed(showDiv);
-
   popup=select('#popup')
   popup.hide();
 
 
-
+  trigger=createButton('trigger');
+  trigger.mousePressed(showDiv);
 }
 
 function removeDiv() {
-
   popup.remove();
 }
 
