@@ -2,16 +2,29 @@ p {
   font-family: STIXGeneral;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 18px;
   text-align: justify;
   letter-spacing: -0.08em;
   text-transform: uppercase;
   color: #F5B3BD;
  }
 
+ #swipe{
+   font-family: STIXGeneral;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 0px;
+   text-align: right;
+   text-transform: lowercase;
+   letter-spacing: 0em;
+   color: #FFFFFF;
+
+ }
+
  div.pictures {
-   padding-top: 10%;
+   padding-top: 5%;
    text-align: center;
    white-space: nowrap;
    overflow: auto;
@@ -34,7 +47,7 @@ div.text{
 }
 
 body  {
-  background-image: url("/dev/source/garten/15.jpg");
+  background-image: url("https://healthyego.github.io/dev/source/garten/15.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
