@@ -19,13 +19,13 @@ p {
 
 div.pictures a:hover {
   opacity: 0.7;
-  filter: blur(8px);
 }
 
 div.logo{
   padding-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
+
 }
 
 div.text{
