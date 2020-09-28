@@ -1,0 +1,41 @@
+p {
+  font-family: Bodoni 72;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #F5B3BD;
+ }
+
+ div.pictures {
+   padding-top: 10%;
+   text-align: center;
+   white-space: nowrap;
+   overflow: auto;
+}
+
+div.pictures a:hover {
+  opacity: 0.7;
+  filter: blur(8px);
+}
+
+div.logo{
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+div.text{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+body  {
+  background-image: url("/source/garten/15.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
