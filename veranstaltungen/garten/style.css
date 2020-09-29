@@ -52,3 +52,40 @@ body  {
   background-attachment: fixed;
   background-size: cover;
 }
+
+
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 18px;
+    line-height: 20px;
+
+   }
+
+  body{
+    background-image: url("https://healthyego.github.io/dev/source/garten/9.jpeg");
+  }
+
+  #logo{
+    width: 50%;
+    margin: 0 auto;
+    padding: 25%;
+    padding-top: 30%;
+  }
+
+  div.logo{
+    width: 50%;
+    height:150px;
+    padding: 0%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
+  div.text{
+    postion: absolut;
+    padding-left: 55%;
+    padding-right: 5%;
+  }
+
+}
