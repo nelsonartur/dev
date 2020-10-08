@@ -17,7 +17,6 @@ p {
    color: #F5B3BD;
    text-align: left;
    color: #FFFFFF;
-
  }
 
  div.pictures {
@@ -35,6 +34,7 @@ div.logo{
   padding-top: 10%;
   padding-left: 7%;
   padding-right: 7%;
+  padding-bottom: 7%;
 
 }
 
