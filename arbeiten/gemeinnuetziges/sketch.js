@@ -6,6 +6,7 @@ var img;
 var language;
 var englishText;
 var germanText;
+var text;
 
 function preload() {
   img = loadImage('../source/arbeiten/gemeinnuetziges/BLM.png');
@@ -33,6 +34,8 @@ function setup (){
 
   button= select('button');
   button.mousePressed(changeLanguage);
+  text= select('#text');
+  text.html(germanText);
 }
 
 function draw(){
@@ -46,12 +49,12 @@ function draw(){
 function changeLanguage(){
   var text= select('#text');
 
-  if(language == "English"){
-    language="German";
-    text.html(englishText);
-  }else{
-    language= 'English';
+  if(language == "DE"){
+    language= 'EN';
     text.html(germanText);
+  }else{
+    language="DE";
+    text.html(englishText);
   }
 
 
