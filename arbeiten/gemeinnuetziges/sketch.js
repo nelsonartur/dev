@@ -6,7 +6,10 @@ var img;
 var language;
 var englishText;
 var germanText;
-var text;
+var textcontent;
+var yPosition=0;
+var icons=[];
+var bool=true;
 
 function preload() {
   img = loadImage('../source/arbeiten/gemeinnuetziges/BLM.png');
@@ -16,45 +19,75 @@ function preload() {
 
 function setup (){
 
-  var myDiv=document.getElementById("blm");
-  divHeight= myDiv.clientHeight;
-  if(divHeight>windowHeight){
-    height=1.015*divHeight;
-  }else{
-    height=windowHeight;
-  }
-
-
-  cnv=createCanvas(0.5*windowWidth,height);
+  cnv=createCanvas(windowWidth,windowHeight);
   cnv.style('z-index','-1');
   cnv.position(0,0);
-  cnv.style('top','0');
-  cnv.style('left','50%');
 
 
   button= select('button');
   button.mousePressed(changeLanguage);
-  text= select('#text');
-  text.html(germanText);
+  textcontent= select('#text');
+  language="DE";
+
+
+  for (var i = 0; i < 530; i++) {
+    icons[i]= new Icon();
+  }
+
+
 }
 
 function draw(){
-  if(counter<520){
-      var size=random(20,60)
-      image(img,random(0,windowWidth),random(windowHeight*0.1,height),size, size);
-      counter+=1;
+  if(frameCount<200){
+    background(250);
+
+    for(var i=0;i<icons.length;i++)
+      {
+        icons[i].fall();
+        icons[i].show();
+      }
+  }else{
+    //background(255,255);
+    cnv.remove();
+    noLoop();
+    changeLanguage();
+    select('img').show();
   }
 }
 
+class Icon{
+  constructor(){
+    this.x = random(0,width);
+    this.y = random(-200,-100);
+    this.z = random(0,20);
+    this.yspeed = map(this.z,0,20,4,10);
+
+  }
+
+  fall(){
+        this.y = this.y + this.yspeed;
+        var g = map(this.z,0,20,0,0.2);
+        this.yspeed = this.yspeed + g;
+    }
+
+    show(){
+        var size = map(this.z,0,20,10,100);
+        image(img,this.x,this.y,size,size);
+    }
+}
+
+
+
+
+
 function changeLanguage(){
-  var text= select('#text');
 
   if(language == "DE"){
     language= 'EN';
-    text.html(germanText);
+    textcontent.html(germanText);
   }else{
     language="DE";
-    text.html(englishText);
+    textcontent.html(englishText);
   }
 
 
