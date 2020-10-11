@@ -38,7 +38,7 @@ function setup (){
 }
 
 function draw(){
-  if(frameCount<200){
+  if(frameCount<180){
     background(250);
 
     for(var i=0;i<icons.length;i++)
