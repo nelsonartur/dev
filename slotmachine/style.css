@@ -1,0 +1,27 @@
+button {
+  width: 15%;
+  height: 5%;
+  cursor: pointer;
+  top: 90%;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+#play{
+  background-color: red;
+  position: absolute;
+  left: 52%;
+}
+
+#home{
+  background-color: green;
+  position: absolute;
+  left: 33%;
+
+}
