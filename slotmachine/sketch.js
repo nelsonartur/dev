@@ -1,21 +1,18 @@
 function setup(){
-  createCanvas(windowWidth,windowHeight);
-  imageMode(CENTER);
-  bcg = loadImage("./slotmachine/sources/slots/background.png");
-  icons=[];
-  loadIcons();
+  checkSize();
 
-  positions = [];
-  for(var i=0; i< 5; i++){
-    position = new Position(windowWidth/2-windowWidth/9*2+i*windowWidth/9);
-    positions.push(position);
-  }
+  gameWidth= windowWidth;
+  gameHeigth= windowWidth/(16/9);
 
-  stopPosition=-1;
-  restart = false;
+  createCanvas(gameWidth,gameHeigth);
 
-  btn = select('#play')
-  home = select('#home')
+  btn = select('#playButton');
+  btn.style('left', gameWidth*0.5+'px');
+  btn.style('top', gameHeigth*0.85+'px');
+
+  home = select('#homeButton');
+  home.style('left', gameWidth*0.5+'px');
+  home.style('top', gameHeigth*0.25+'px');
 
   btn.mousePressed(function(){
     if(!restart){
@@ -29,6 +26,21 @@ function setup(){
     }
     restart = !restart;
   })
+
+
+  imageMode(CENTER);
+  bcg = loadImage("./slotmachine/sources/slots/background.png");
+  icons=[];
+  loadIcons();
+
+  positions = [];
+  for(var i=0; i< 5; i++){
+    position = new Position(gameWidth/2-gameWidth/9*2+i*gameWidth/9);
+    positions.push(position);
+  }
+
+  stopPosition=-1;
+  restart = false;
 }
 
 function createTimeout(i){
@@ -44,7 +56,7 @@ function createTimeout(i){
 
 function draw(){
   background(100);
-  image(bcg,windowWidth/2, windowHeight/2, windowWidth, windowHeight);
+  image(bcg,gameWidth/2, gameHeigth/2, gameWidth, gameHeigth);
 
   for(var i=0; i<positions.length; i++){
     if(stopPosition<i){
@@ -62,7 +74,7 @@ class Icon{
     this.img=img;
   }
   display(xPosition){
-    image(this.img,xPosition,windowHeight/2,windowWidth/10,windowWidth/10)
+    image(this.img,xPosition,gameHeigth/2,gameWidth/10,gameWidth/10)
   }
 }
 
@@ -97,19 +109,30 @@ function checkWin(){
     win=true;
   }
   if(win){
-    alert("You've won!")
+    alert("Du hast gewonnen!! Sende uns eine Mail an healthyego@icloud.com mit einem Screenshot vom letzten Durchgang. Es wartet ein toller Gewinn auf dich!")
   }else{
-    alert("No Win for you! Try again")
+    alert("Pech gehabt! Versuch's nochmal.")
   }
 }
 
 function checkSameIcon(){
-  sameIcon=false;
-  for(var i=0; i<positions.length; i++){
-    if(!positions[0].icon.id==positions[i].icon.id){
-      sameIcon=false;
-      break;
-    }
+  if(
+    positions[0].icon.id == positions[1].icon.id &&
+    positions[0].icon.id == positions[2].icon.id &&
+    positions[0].icon.id == positions[3].icon.id &&
+    positions[0].icon.id == positions[4].icon.id){
+    return true;
+  }else {
+    return false;
   }
-  return sameIcon
+}
+
+function checkSize(){
+  btnImgS = select('#playButtonImgSmall');
+  btnImgL = select('#playButtonImgLarge');
+  if(windowWidth/windowHeight < 1){
+    alert("Nutze die Desktop Version oder drehe dein Gerät in den Landscape-Modus.");
+    btnImgS.style('visibility','visible');
+    btnImgL.style('visibility','hidden');
+  }
 }
