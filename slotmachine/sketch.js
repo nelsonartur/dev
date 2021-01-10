@@ -7,8 +7,12 @@ function setup(){
   createCanvas(gameWidth,gameHeigth);
 
   btn = select('#playButton');
+  btnImg = select('#playButtonImg');
+  btnImg.style('width',gameWidth/4+'px');
   btn.style('left', gameWidth*0.5+'px');
   btn.style('top', gameHeigth*0.85+'px');
+  btn.style('transform', 'translate(-'+gameWidth/8+'px,0%)');
+
 
   home = select('#homeButton');
   home.style('left', gameWidth*0.5+'px');
@@ -128,11 +132,7 @@ function checkSameIcon(){
 }
 
 function checkSize(){
-  btnImgS = select('#playButtonImgSmall');
-  btnImgL = select('#playButtonImgLarge');
   if(windowWidth/windowHeight < 1){
     alert("Nutze die Desktop Version oder drehe dein Gerät in den Landscape-Modus.");
-    btnImgS.style('visibility','visible');
-    btnImgL.style('visibility','hidden');
   }
 }
