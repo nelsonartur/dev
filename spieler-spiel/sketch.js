@@ -1,5 +1,12 @@
+function preload(){
+  bcg = loadImage("./spieler-spiel/sources/slots/background.png");
+  icons=[];
+  loadIcons();
+}
+
 function setup(){
   checkSize();
+  alert("Willkommen beim Spieler Spiel.\r\nDrücke auf den Play-Button, um die Slots drehen bzw. stoppen zu lassen. Bei fünf gleichen Symbolen gewinnst du ein limitiertes Foto-Zine mit Bildern von Skinny Finsta, exklusiv geschossen und zusammengestellt vom Fotografen Joel Bittner. Schicke einfach ein Screenshot deines Gewinns an unsere E-Mail-Adresse: healthyego@icloud.com\r\n\Viel Glück!")
 
   gameWidth= windowWidth;
   gameHeigth= windowWidth/(16/9);
@@ -15,6 +22,8 @@ function setup(){
 
 
   home = select('#homeButton');
+  homeBtnImg = select('#homeButtonImg');
+  homeBtnImg.style('width',gameWidth/4+'px');
   home.style('left', gameWidth*0.5+'px');
   home.style('top', gameHeigth*0.25+'px');
 
@@ -33,9 +42,6 @@ function setup(){
 
 
   imageMode(CENTER);
-  bcg = loadImage("./slotmachine/sources/slots/background.png");
-  icons=[];
-  loadIcons();
 
   positions = [];
   for(var i=0; i< 5; i++){
@@ -101,7 +107,7 @@ class Position{
 
 function loadIcons(){
   for(var i=0; i<7;i++){
-    img = loadImage("./slotmachine/sources/slots/"+i+".png");
+    img = loadImage("./spieler-spiel/sources/slots/"+i+".png");
     icon = new Icon(i,img);
     icons.push(icon);
   }
