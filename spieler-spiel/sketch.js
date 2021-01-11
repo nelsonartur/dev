@@ -139,6 +139,8 @@ function checkSameIcon(){
 
 function checkSize(){
   if(windowWidth/windowHeight < 1){
-    alert("Nutze die Desktop Version oder drehe dein Gerät in den Landscape-Modus.");
+    alert("Nutze die Desktop Version oder drehe dein Gerät in den Landscape-Modus. \r\n Hinweis: Wir nutzen Google Analytics, um unseren Internetauftritt zu verbessern.");
+  }else{
+    alert("Hinweis: Wir nutzen Google Analytics, um unseren Internetauftritt zu verbessern.");
   }
 }
