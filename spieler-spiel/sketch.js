@@ -13,12 +13,19 @@ function setup(){
 
   createCanvas(gameWidth,gameHeigth);
 
+
   btn = select('#playButton');
-  btnImg = select('#playButtonImg');
+  btnImg = select('#backgroundImg');
   btnImg.style('width',gameWidth/4+'px');
+  btnImg.style('height',(gameWidth/4)/(500/109)+'px');
+
+
+
   btn.style('left', gameWidth*0.5+'px');
   btn.style('top', gameHeigth*0.85+'px');
   btn.style('transform', 'translate(-'+gameWidth/8+'px,0%)');
+
+
 
 
   home = select('#homeButton');
@@ -28,13 +35,14 @@ function setup(){
   home.style('top', gameHeigth*0.25+'px');
 
   btn.mousePressed(function(){
+    btnImg.style('visibility','hidden');
     if(!restart){
       btn.attribute('disabled',true)
-
       for(var i=0; i<positions.length; i++){
         createTimeout(i);
       }
     }else{
+      btnImg.style('visibility','visible');
       stopPosition=-1;
     }
     restart = !restart;
@@ -59,13 +67,14 @@ function createTimeout(i){
     if(i==4){
       checkWin()
       btn.removeAttribute('disabled');
+      btnImg.style('visibility','visible');
     }
   },1000+1000*i);
 }
 
 
 function draw(){
-  background(100);
+  background(0);
   image(bcg,gameWidth/2, gameHeigth/2, gameWidth, gameHeigth);
 
   for(var i=0; i<positions.length; i++){

@@ -7,9 +7,18 @@
 }
 
 
-#playButtonImg{
-  width:250px;
+#backgroundImg{
+  width:500px;
+  height: 109px;
+  background: url("./sources/slots/playbutton_500px.png") no-repeat;
+  background-size: 100% 100%;
 }
+
+#backgroundImg:hover{
+  background: url("./sources/slots/playbutton_500px_clicked.png") no-repeat;
+  background-size: 100% 100%;
+}
+
 
 #homeButton{
   cursor: pointer;
@@ -20,8 +29,6 @@
   font-weight: bold;
   font-family: helvetica;
   font-size: 20pt;
-
-
 }
 
 body{
