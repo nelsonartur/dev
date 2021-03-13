@@ -14,7 +14,7 @@ function setup() {
 
 
   textSize(50);
-  fill(255,0,0);
+  fill(0,0,255);
 }
 
 function draw() {
